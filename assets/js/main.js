@@ -1764,4 +1764,33 @@
 	// 	}
 	// });
 
+
+	function translate(lng, tagAttr) {
+		var translate = new Translate();
+		translate.init(tagAttr, lng);
+		translate.process();
+	}
+
+    $(document).ready(function () {
+
+        $("#enTranslator").click(function (e) {
+			console.log('clicked');
+            e.preventDefault();
+            translate("en", "lng-tag");
+        });
+        
+        $("#arTranslator").click(function (e) {
+            e.preventDefault();
+            translate("ar", "lng-tag");
+        });
+
+    });
+
+
+
+
+
+	
+	
+	
 }(jQuery));
