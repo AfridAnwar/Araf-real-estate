@@ -1,0 +1,706 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icon CSS -->
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--Nice Select CSS -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- BoxIcon  CSS -->
+    <link href="assets/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Google Font for Arabic (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Title -->
+    <title>أراف 3 - تفاصيل المشروع</title>
+    <link rel="icon" href="assets/img/fav-icon.svg" type="image/gif" sizes="20x20">
+
+    <!-- ARAF 3 CUSTOM STYLES (ARABIC RTL) -->
+    <style>
+        /* Force Cairo Font */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
+        /* RTL Overrides */
+        body {
+            text-align: right;
+            direction: rtl;
+        }
+        
+        .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+        .me-auto { margin-left: auto !important; margin-right: 0 !important; }
+        .ps-lg-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+        
+        /* Araf Theme Colors */
+        :root {
+            --araf-teal: #0E4C5F;
+            --araf-gold: #C5A900;
+        }
+        .text-araf-teal { color: var(--araf-teal); }
+        .text-araf-gold { color: var(--araf-gold); }
+        .bg-araf-teal { background-color: var(--araf-teal); }
+        
+        /* Section Headers */
+        .section-header-araf h2 {
+            font-weight: 700;
+            color: var(--araf-teal);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-header-araf h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--araf-gold);
+            margin-top: 5px;
+        }
+
+        /* Value Cards */
+        .araf-value-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            height: 100%;
+            border: 1px solid #eee;
+        }
+        .araf-value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--araf-gold);
+        }
+        .araf-value-icon {
+            font-size: 40px;
+            color: var(--araf-gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Warranties Section */
+        .warranty-section-bg {
+            background-color: var(--araf-teal);
+            background-image: radial-gradient(circle at top left, #125d74 0%, var(--araf-teal) 60%);
+            overflow: hidden;
+        }
+
+        .warranty-card {
+            background: rgba(255, 255, 255, 0.05); /* Glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 35px 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        .warranty-card:hover {
+            background: rgba(197, 169, 0, 0.1); /* Gold tint on hover */
+            border-color: var(--araf-gold);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .warranty-card .icon-wrapper {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            color: var(--araf-gold);
+            transition: 0.3s;
+            font-size: 32px; 
+        }
+
+        .warranty-card .icon-wrapper svg {
+            width: 35px;
+            height: 35px;
+            fill: currentColor;
+        }
+        
+        .warranty-card:hover .icon-wrapper {
+            background: var(--araf-gold);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .warranty-year {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+            display: block;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .warranty-label {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0; 
+        }
+
+        /* Insurance Banner */
+        .insurance-banner {
+            background: linear-gradient(135deg, #C5A900 0%, #9e8700 100%);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .insurance-banner::before {
+            content: "\F505"; 
+            font-family: bootstrap-icons !important;
+            position: absolute;
+            left: -20px; /* Moved to left for RTL */
+            right: auto;
+            top: 50%;
+            transform: translateY(-50%) rotate(-15deg);
+            font-size: 15rem;
+            opacity: 0.1;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        /* List Group RTL */
+        .list-group-item {
+            text-align: right;
+            padding-right: 0;
+        }
+        .list-group-item i {
+            margin-left: 10px !important;
+            margin-right: 0 !important;
+        }
+
+        /* Nav Fixes for RTL */
+        .main-menu ul li .sub-menu {
+            right: 0;
+            left: auto;
+            text-align: right;
+        }
+        .main-menu ul li .sub-menu li a {
+            text-align: right;
+        }
+        /* Fix dropdown icons */
+        .dropdown-icon {
+            float: left; 
+        }
+    </style>
+</head>
+
+<body id="body" class="tt-magic-cursor">
+
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <div class="scroll-progress-wrap">
+        <span>أعلى</span>
+        <div class="progress-container">
+            <div id="progressbar" class="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="right-sidebar-menu">
+        <div class="sidebar-logo-area d-flex justify-content-between align-items-center">
+            <div class="sidebar-logo-wrap">
+                <a href="index.html"><img alt="image" src="assets/img/Araf logo.jpeg"></a>
+            </div>
+            <div class="right-sidebar-close-btn">
+                <i class="bi bi-x"></i>
+            </div>
+        </div>
+        <div class="sidebar-content-wrap">
+            <div class="title-area">
+                <span>تواصل معنا</span>
+                <h2>تواصل مع أراف</h2>
+                <p>هل أنت مستعد لاتخاذ الخطوة الأولى نحو فتح الفرص وتحقيق الأهداف وتبني الابتكار؟</p>
+            </div>
+            <ul class="contact-area">
+                 <li>
+                    <div class="single-contact">
+                        <div class="content">
+                             <span>اتصل بنا في أي وقت</span>
+                             <h6 dir="ltr"><a href="tel:0533101111">0533 101 111</a></h6>
+                        </div>
+                    </div>
+                 </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header Start -->
+    <header class="header-area style-1">
+        <div class="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
+            <div class="header-logo">
+                <a href="real-estate.html">
+                    <img alt="Araf Real Estate" class="img-fluid" src="assets/img/Araf logo.jpeg" style="max-width: 160px; max-height: 80px; width: auto; object-fit: contain;">
+                </a>
+            </div>
+            <div class="main-menu">
+                <div class="mobile-logo-area d-lg-none d-flex align-items-center justify-content-between">
+                    <div class="mobile-logo-wrap">
+                        <a href="index.html"><img alt="Araf" src="assets/img/Araf logo.jpeg" style="max-width: 120px;"></a>
+                    </div>
+                    <div class="menu-close-btn">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li class="menu-item-has-children active"> 
+                        <a href="service.html" class="drop-down">خدماتنا</a>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="service.html">الخدمات</a></li>
+                            <li class="active"><a href="service-details.html">تفاصيل المشروع (أراف 3)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <div class="btn-area d-lg-none d-flex justify-content-center">
+                    <a href="contact.html" class="primary-btn">احجز وحدتك</a>
+                </div>
+            </div>
+            <div class="nav-right d-flex jsutify-content-end align-items-center">
+                <div class="right-sidebar-button">
+                    <span>تواصل معنا</span>
+                </div>
+                <div class="sidebar-button mobile-menu-btn">
+                    <i class="bi bi-list" style="font-size: 2rem;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+   <!-- Start Breadcrumb section -->
+   <div class="breadcrumb-section" style="background-image: linear-gradient(91.45deg, #000000 17.96%, rgba(0, 0, 0, 0.9) 44.49%, rgba(0, 0, 0, 0.8) 67.58%, rgba(0, 0, 0, 0.5) 98.52%), url('assets/img/inner-pages/breadcrumb-bg1.jpg');">  
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="banner-content">
+                    <span>التطوير العقاري</span>
+                    <h1 class="araf-theme">مشروع أراف 3</h1>
+                    <ul class="breadcrumb-list">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li>أراف 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    <!-- End Breadcrumb section -->
+
+    <!-- =========================
+         START ARAF 3 CONTENT (ARABIC)
+    ========================= -->
+    
+    <!-- 1. Our Story Section -->
+    <div class="service-details-page pt-120 mb-60 araf-theme">
+        <div class="container">
+            <div class="row g-lg-4 gy-5 align-items-center">
+                <div class="col-lg-6">
+                    <!-- Image Area -->
+                    <div class="service-details-thumb">
+                        <img src="assets/img/araf3.png" class="img-fluid rounded shadow" alt="فيلا أراف 3">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="details-content-wrapper ps-lg-4">
+                        <div class="section-header-araf mb-4">
+                            <h2>قصتنا</h2>
+                        </div>
+                        <p>بدأنا المسيرة قبل أكثر من 6 أعوام في التطوير العقاري، عندما تخصصنا في بناء الفلل السكنية والعمائر التجارية، بالإضافة إلى التخطيط والاستثمار العقاري.</p>
+                        
+                        <div class="mt-4 p-4" style="background-color: #f9f9f9; border-radius: 8px; border-right: 4px solid var(--araf-teal);">
+                            <h4 class="text-araf-teal fst-italic">"معنا كل تفصيل يحكي قصة تميز وجودة"</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Location Section -->
+    <div class="service-details-page mb-120 araf-theme">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-50">
+                    <div class="section-header-araf">
+                        <h2>ما الذي يميز حي العروبة؟</h2>
+                    </div>
+                    <p class="mx-auto" style="max-width: 800px;">
+                        يعد حي العروبة من أرقى أحياء مدينة الدمام وأكثرها طلباً وعرضاً في نفس الوقت. يقع <strong>أراف 3</strong> في منطقة استراتيجية، ويتميز الحي بموقعه الذي ينفذ على طرق رئيسية:
+                    </p>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-5">
+                            <ul class="list-group text-start shadow-sm" style="padding-right: 0;">
+                                <li class="list-group-item border-0"><i class="bi bi-geo-alt-fill text-araf-gold"></i> طريق الملك عبدالله (طريق الرياض)</li>
+                                <li class="list-group-item border-0"><i class="bi bi-geo-alt-fill text-araf-gold"></i> طريق أبو حدرية الدولي المتصل بجميع دول الخليج</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-3">ويمكن الوصول إليه من هذه الطرق دون المرور بمناطق الزحام.</p>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/VCxhrAdbjVyZNM6r8" target="_blank" class="primary-btn">
+                            اضغط للانتقال للموقع
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Map Embed -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="ratio ratio-21x9 rounded overflow-hidden shadow">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.5!2d50.0!3d26.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE4JzAwLjAiTiA1MMKwMDAnMDAuMCJF!5e0!3m2!1sen!2ssa!4v1600000000000!5m2!1sen!2ssa" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Our Values Section -->
+    <div class="home3-process-section mb-120 araf-theme">
+        <div class="container">
+            <div class="section-header-araf text-center mb-60">
+                <h2>قيمنا</h2>
+                <p>المبادئ الأساسية التي يقوم عليها أراف 3</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="araf-value-card">
+                        <i class="bi bi-shield-check araf-value-icon"></i>
+                        <h4>الموثوقية</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="araf-value-card">
+                        <i class="bi bi-star-fill araf-value-icon"></i>
+                        <h4>الإتقان</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="araf-value-card">
+                        <i class="bi bi-graph-up-arrow araf-value-icon"></i>
+                        <h4>الارتقاء</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="araf-value-card">
+                        <i class="bi bi-lightbulb-fill araf-value-icon"></i>
+                        <h4>الابتكار</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="araf-value-card">
+                        <i class="bi bi-gem araf-value-icon"></i>
+                        <h4>الجودة</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="araf-value-card">
+                        <i class="bi bi-trophy-fill araf-value-icon"></i>
+                        <h4>الفخامة</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Warranties Section (Redesigned with Content-Specific Icons - Arabic) -->
+    <div class="service-details-page warranty-section-bg pt-120 pb-120 araf-theme">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="text-white fw-bold mb-3 display-5">الضمانات</h2>
+                    <p class="text-white-50 fs-5">تغطية شاملة لراحة بالك</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                
+                <!-- 1. Underground Tanks (Custom Tank SVG) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <!-- Custom Tank Icon -->
+                            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 4h8v8H4z" opacity="0"/><path d="M8 0c-4.418 0-8 1.343-8 3s3.582 3 8 3 8-1.343 8-3-3.582-3-8-3zM8 4c-3.737 0-6.853-0.959-7.784-2.279 0.443 2.016 3.738 3.279 7.784 3.279s7.341-1.263 7.784-3.279c-0.931 1.32-4.047 2.279-7.784 2.279zM16 8c0 1.657-3.582 3-8 3s-8-1.343-8-3v-5c0 1.657 3.582 3 8 3s8-1.343 8-3v5zM16 13c0 1.657-3.582 3-8 3s-8-1.343-8-3v-5c0 1.657 3.582 3 8 3s8-1.343 8-3v5z"/></svg>
+                        </div>
+                        <span class="warranty-year">25 سنة</span>
+                        <h5 class="warranty-label">الخزانات الأرضية</h5>
+                    </div>
+                </div>
+                
+                <!-- 2. Switches & Sockets (Custom Socket SVG) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                             <!-- Custom Socket Icon -->
+                             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>
+                        </div>
+                        <span class="warranty-year">20 سنة</span>
+                        <h5 class="warranty-label">المفاتيح والأفياش</h5>
+                    </div>
+                </div>
+                
+                <!-- 3. Plumbing (Wrench/Pipes Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-wrench-adjustable"></i>
+                        </div>
+                        <span class="warranty-year">15 سنة</span>
+                        <h5 class="warranty-label">تمديدات السباكة</h5>
+                    </div>
+                </div>
+                
+                <!-- 4. Structure (House Fill Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-house-door-fill"></i>
+                        </div>
+                        <span class="warranty-year">10 سنوات</span>
+                        <h5 class="warranty-label">الهيكل الإنشائي</h5>
+                    </div>
+                </div>
+
+                <!-- 5. Upper Tanks (Custom Tank SVG) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 4h8v8H4z" opacity="0"/><path d="M8 0c-4.418 0-8 1.343-8 3s3.582 3 8 3 8-1.343 8-3-3.582-3-8-3zM8 4c-3.737 0-6.853-0.959-7.784-2.279 0.443 2.016 3.738 3.279 7.784 3.279s7.341-1.263 7.784-3.279c-0.931 1.32-4.047 2.279-7.784 2.279zM16 8c0 1.657-3.582 3-8 3s-8-1.343-8-3v-5c0 1.657 3.582 3 8 3s8-1.343 8-3v5zM16 13c0 1.657-3.582 3-8 3s-8-1.343-8-3v-5c0 1.657 3.582 3 8 3s8-1.343 8-3v5z"/></svg>
+                        </div>
+                        <span class="warranty-year">10 سنوات</span>
+                        <h5 class="warranty-label">الخزانات العلوية</h5>
+                    </div>
+                </div>
+
+                <!-- 6. Insulation (Layers Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-layers-fill"></i>
+                        </div>
+                        <span class="warranty-year">10 سنوات</span>
+                        <h5 class="warranty-label">العزل المائي والحراري</h5>
+                    </div>
+                </div>
+
+                <!-- 7. Electrical (Lightning Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <span class="warranty-year">10 سنوات</span>
+                        <h5 class="warranty-label">تمديدات الكهرباء</h5>
+                    </div>
+                </div>
+
+                <!-- 8. Gypsum (Grid/Ceiling Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-grid-3x3-gap-fill"></i>
+                        </div>
+                        <span class="warranty-year">5 سنوات</span>
+                        <h5 class="warranty-label">الأسقف الجبسية</h5>
+                    </div>
+                </div>
+
+                <!-- 9. Sanitary (Droplet Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-droplet-fill"></i>
+                        </div>
+                        <span class="warranty-year">5 سنوات</span>
+                        <h5 class="warranty-label">المواد الصحية</h5>
+                    </div>
+                </div>
+
+                <!-- 10. Aluminum (Window Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-window"></i>
+                        </div>
+                        <span class="warranty-year">سنتين</span>
+                        <h5 class="warranty-label">الألمنيوم</h5>
+                    </div>
+                </div>
+
+                <!-- 11. Doors (Door Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-door-closed-fill"></i>
+                        </div>
+                        <span class="warranty-year">سنتين</span>
+                        <h5 class="warranty-label">الأبواب الخشبية</h5>
+                    </div>
+                </div>
+
+                <!-- 12. Garages (Car Icon) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="warranty-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-car-front-fill"></i>
+                        </div>
+                        <span class="warranty-year">سنتين</span>
+                        <h5 class="warranty-label">الكراجات</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Malath Insurance Banner -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="insurance-banner text-center text-white">
+                        <div class="position-relative z-1">
+                            <h2 class="fw-bold mb-3 text-white">شركة ملاذ للتأمين: 10 سنوات</h2>
+                            <p class="mb-0 fs-5 opacity-75">يوجد تأسيس إنشائي متكامل للمصاعد، بما يضمن إمكانية إضافتها لاحقاً بسلاسة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         END ARAF 3 CONTENT
+    ========================= -->
+
+    <!-- Home1 Footer Section End -->
+    <footer class="footer-section">
+        <div class="footer-wrapper">
+            <div class="row g-xl-0 gy-5 align-items-center">
+                <div class="col-xl-6">
+                    <div class="footer-logo-and-contact-area">
+                        <div class="footer-logo-area">
+                            <a href="index.html" class="footer-logo">
+                                <img src="assets/img/Araf logo.jpeg" alt="Araf" style="max-width: 150px;">
+                            </a>
+                            <div class="footer-content">
+                                <p>أراف العقارية - رحلة من التميز في التطوير العقاري وبناء المستقبل.</p>
+                                <ul class="social-list">
+                                    <li><a href="#"><i class="bi bi-linkedin"></i><span>لينكد إن</span></a></li>
+                                    <li><a href="#"><i class="bi bi-twitter-x"></i><span>تويتر</span></a></li>
+                                    <li><a href="#"><i class="bi bi-instagram"></i><span>انستقرام</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="contact-area">
+                            <li>
+                                <div class="single-contact">
+                                    <div class="content">
+                                        <span>اتصل بنا</span>
+                                        <h6 dir="ltr"><a href="tel:0533101111">0533 101 111</a></h6>
+                                        <h6 dir="ltr"><a href="tel:0533356224">0533 356 224</a></h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="footer-address-and-menu-area">
+                        <div class="row gy-xl-0 gy-5">
+                            <div class="col-lg-12 order-xl-2 order-1">
+                                <div class="footer-menu">
+                                    <div class="row gy-5 justify-content-between">
+                                        <div class="col-md-12">
+                                            <div class="footer-widget">
+                                                <div class="widget-title">
+                                                    <h5>شركاء النجاح</h5>
+                                                </div>
+                                                <div class="menu-container d-flex gap-4 text-white">
+                                                    <span>إتمام</span> | <span>وافي</span> | <span>وزارة الإسكان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-wrap">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="copyright-area">
+                        <p>حقوق النشر 2024 <a href="index.html">أراف العقارية</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Home1 Footer Section End -->
+     
+    <!--  Main jQuery  -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Popper and Bootstrap JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Swiper slider JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Waypoints JS -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- Counterup JS -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Nice Select  JS -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- Fancybox  JS -->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- Wow  JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Marquee  JS -->
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <!-- GSAP  JS -->
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/simpleParallax.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/SplitText.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
