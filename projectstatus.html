@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Portfolio - Araf Real Estate</title>
+    
+    <!-- External CSS (Assuming your template uses Bootstrap and BI) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Link your existing style.css here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* --- NEW PROJECT SECTION STYLES --- */
+        .ps-portfolio-section {
+            background-color: #333; /* Dark background as per reference */
+            padding: 80px 0;
+        }
+
+        .ps-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Tab Navigation */
+        .ps-tabs-nav {
+            display: flex;
+            background-color: #888;
+        }
+
+        .ps-tab-btn {
+            flex: 1;
+            padding: 20px;
+            border: none;
+            background: #888;
+            color: #444;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .ps-tab-btn.active {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Content Area */
+        .ps-tab-content {
+            display: none;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .ps-tab-content.active {
+            display: block;
+        }
+
+        /* Horizontal Card Layout */
+        .ps-project-card {
+            display: flex;
+            background: #fff;
+            margin-bottom: 25px;
+            height: 320px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .ps-image-side {
+            width: 40%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ps-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ps-info-side {
+            width: 60%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ps-info-side h3 {
+            color: #c5a059; /* Gold Title color */
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .ps-info-side .type { color: #666; font-size: 16px; margin-bottom: 5px; }
+        .ps-info-side .loc { color: #999; font-size: 14px; }
+
+        /* Sold Style (Grayscale + Stamp) */
+        .ps-project-card.is-sold .ps-image-side img {
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+
+        .ps-sold-stamp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            border: 4px solid #cc0000;
+            color: #cc0000;
+            padding: 8px 25px;
+            font-size: 36px;
+            font-weight: 900;
+            z-index: 10;
+            background: rgba(255,255,255,0.1);
+            pointer-events: none;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .ps-project-card { flex-direction: column; height: auto; }
+            .ps-image-side, .ps-info-side { width: 100%; }
+            .ps-image-side { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- START NAVIGATION -->
+    <header class="header-area style-1">
+        <div class="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
+            <div class="header-logo">
+                <a href="real-estate.html"><img alt="image" class="img-fluid" src="assets/img/Araf logo.jpeg" style="height: 50px;"></a>
+            </div>
+            <div class="main-menu">
+                <div class="mobile-logo-area d-lg-none d-flex align-items-center justify-content-between">
+                    <div class="mobile-logo-wrap">
+                        <a href="index.html"><img alt="image" src="assets/img/header-logo.svg"></a>
+                    </div>
+                    <div class="menu-close-btn">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div>
+                <ul class="menu-list">
+                    <li class="menu-item-has-children">
+                        <a href="#" class="drop-down">COMPANY</a>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Construction</a></li>
+                            <li><a href="real-estate.html">Real Estate</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"> 
+                        <a href="service.html" class="drop-down">SOLUTIONS</a>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="service.html">Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="drop-down">PROJECT</a>
+                        <i class="bi bi-plus dropdown-icon"></i>
+                        <ul class="sub-menu">
+                            <li><a href="project.html">Project Grid</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right d-flex jsutify-content-end align-items-center">
+                <div class="right-sidebar-button">
+                    <svg width="14" height="14" viewbox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="11.2" height="1.4" rx="0.699998"></rect>
+                        <rect x="2.80078" y="5.6" width="11.2" height="2.79999" rx="1.4"></rect>
+                        <rect y="12.6" width="11.2" height="1.4" rx="0.699998"></rect>
+                    </svg>
+                    <span>GET IN TOUCH</span>
+                </div>
+                <a href="contact.html" class="primary-btn d-lg-flex d-none">
+                    Start A Project
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- END NAVIGATION -->
+
+    <!-- START PROJECT STATUS SECTION -->
+    <section class="ps-portfolio-section">
+        <div class="ps-container">
+            <!-- Tabs Navigation -->
+            <div class="ps-tabs-nav">
+                <button class="ps-tab-btn active" onclick="switchTab(event, 'construction')">In Construction</button>
+                <button class="ps-tab-btn" onclick="switchTab(event, 'selling')">Started Selling</button>
+                <button class="ps-tab-btn" onclick="switchTab(event, 'sold')">Sold</button>
+            </div>
+
+            <div class="ps-content-area">
+                <!-- Panel 1: In Construction -->
+                <div id="construction" class="ps-tab-content active">
+                    <div class="ps-project-card">
+                        <div class="ps-image-side">
+                            <img src="assets/img/project-1.jpg" alt="Sultan Tower">
+                        </div>
+                        <div class="ps-info-side">
+                            <h3>Sultan Tower</h3>
+                            <p class="type">Residential Commercial Tower</p>
+                            <p class="loc">Al Jamia District - King Abdullah Road</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Started Selling -->
+                <div id="selling" class="ps-tab-content">
+                    <div class="ps-project-card">
+                        <div class="ps-image-side">
+                            <img src="assets/img/project-2.jpg" alt="Avena Project">
+                        </div>
+                        <div class="ps-info-side">
+                            <h3>Avena Project</h3>
+                            <p class="type">Modern Residential Villas</p>
+                            <p class="loc">Al Narjis District - Riyadh</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Sold (Completed) -->
+                <div id="sold" class="ps-tab-content">
+                    <div class="ps-project-card is-sold">
+                        <div class="ps-image-side">
+                            <div class="ps-sold-stamp">SOLD</div>
+                            <img src="assets/img/araf3.png" alt="Aventura">
+                        </div>
+                        <div class="ps-info-side">
+                            <h3>Aventura Project</h3>
+                            <p class="type">Al Shurooq District</p>
+                            <p class="loc">Successfully Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="ps-project-card is-sold">
+                        <div class="ps-image-side">
+                            <div class="ps-sold-stamp">SOLD</div>
+                            <img src="assets/img/project-4.jpg" alt="Plus Haven">
+                        </div>
+                        <div class="ps-info-side">
+                            <h3>Plus Haven Project</h3>
+                            <p class="type">Al Nahda District</p>
+                            <p class="loc">Sultan Project 45</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END PROJECT STATUS SECTION -->
+
+    <!-- START FOOTER -->
+    <footer class="footer-section style-2">
+        <div class="footer-wrapper">
+            <div class="row g-xl-0 gy-5 align-items-center">
+                <div class="col">
+                    <div class="footer-logo-and-contact-area">
+                        <div class="footer-logo-area">
+                            <a href="index.html" class="footer-logo">
+                                <img src="assets/img/footer-logo.svg" alt="">
+                            </a>
+                            <div class="footer-content">
+                                <p>Welcome to Araf Real Estate, where innovation meet our passion in a journey that started dream.</p>
+                                <ul class="social-list">
+                                    <li><a href="#"><i class="bi bi-linkedin"></i><span>LinkedIn</span></a></li>
+                                    <li><a href="#"><i class="bi bi-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="bi bi-instagram"></i><span>Instagram</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="contact-area">
+                            <li>
+                                <div class="single-contact">
+                                    <div class="icon">
+                                        <svg width="33" height="33" viewbox="0 0 33 33" xmlns="http://www.w3.org/2000/svg"><path d="M26.0808 20.4419C25.4052 19.7385 24.5903 19.3624 23.7267 19.3624C22.87 19.3624 22.0481 19.7315 21.3447 20.435L19.1438 22.6289C18.9627 22.5314 18.7816 22.4408 18.6075 22.3503C18.3568 22.2249 18.12 22.1065 17.918 21.9812C15.8564 20.6718 13.9828 18.9654 12.1859 16.7575C11.3153 15.6571 10.7302 14.7307 10.3054 13.7905C10.8765 13.2681 11.4058 12.7248 11.9212 12.2025C12.1162 12.0075 12.3113 11.8055 12.5063 11.6105C13.9689 10.1478 13.9689 8.25339 12.5063 6.79077L10.6049 4.88935C10.3889 4.67344 10.1661 4.45057 9.95713 4.22769C9.53923 3.79587 9.10045 3.35012 8.64773 2.93222C7.97214 2.26359 7.16421 1.90839 6.3145 1.90839C5.46478 1.90839 4.64293 2.26359 3.94644 2.93222C3.93947 2.93919 3.93947 2.93919 3.93251 2.94615L1.56445 5.33511C0.672947 6.22661 0.164512 7.31313 0.0530735 8.57377C-0.114084 10.6075 0.484896 12.502 0.944577 13.7417C2.07289 16.7854 3.75839 19.6061 6.27271 22.6289C9.32332 26.2715 12.9938 29.148 17.1867 31.1748C18.7886 31.934 20.9268 32.8324 23.3158 32.9857C23.462 32.9926 23.6152 32.9996 23.7545 32.9996C25.3634 32.9996 26.7146 32.4215 27.7733 31.2723C27.7802 31.2584 27.7942 31.2514 27.8011 31.2375C28.1633 30.7987 28.5812 30.4017 29.02 29.9768C29.3195 29.6913 29.6259 29.3918 29.9254 29.0784C30.6149 28.361 30.9771 27.5252 30.9771 26.6685C30.9771 25.8049 30.608 24.9761 29.9045 24.2796L26.0808 20.4419ZM28.5742 27.7759C28.5673 27.7759 28.5673 27.7829 28.5742 27.7759C28.3026 28.0685 28.024 28.3331 27.7245 28.6257C27.2718 29.0575 26.8121 29.5102 26.3803 30.0186C25.6768 30.7708 24.848 31.126 23.7615 31.126C23.657 31.126 23.5456 31.126 23.4411 31.1191C21.3726 30.9867 19.4503 30.1788 18.0085 29.4893C14.0664 27.5809 10.6049 24.8716 7.72837 21.4379C5.35334 18.5753 3.76535 15.9287 2.71366 13.087C2.06592 11.3528 1.82912 10.0016 1.93359 8.727C2.00324 7.91211 2.31666 7.23652 2.89474 6.65843L5.26976 4.28341C5.61104 3.96302 5.97322 3.7889 6.32843 3.7889C6.76721 3.7889 7.12242 4.05357 7.3453 4.27644C7.35226 4.28341 7.35923 4.29037 7.36619 4.29734C7.79105 4.69434 8.19501 5.10527 8.61987 5.54405C8.83578 5.76693 9.05866 5.9898 9.28153 6.21965L11.1829 8.12106C11.9212 8.85933 11.9212 9.54189 11.1829 10.2802C10.981 10.4822 10.7859 10.6841 10.584 10.8791C9.99891 11.4781 9.44173 12.0353 8.83578 12.5786C8.82185 12.5925 8.80792 12.5995 8.80096 12.6134C8.20198 13.2124 8.31342 13.7974 8.43878 14.1944C8.44575 14.2153 8.45271 14.2362 8.45968 14.2571C8.95418 15.4551 9.65067 16.5834 10.7093 17.9276L10.7163 17.9346C12.6386 20.3026 14.6654 22.1483 16.9011 23.5622C17.1867 23.7433 17.4792 23.8895 17.7578 24.0288C18.0085 24.1542 18.2453 24.2726 18.4473 24.398C18.4752 24.4119 18.503 24.4328 18.5309 24.4467C18.7677 24.5651 18.9906 24.6209 19.2204 24.6209C19.7985 24.6209 20.1607 24.2587 20.2791 24.1403L22.6611 21.7583C22.8979 21.5215 23.274 21.2359 23.7128 21.2359C24.1446 21.2359 24.4998 21.5075 24.7157 21.7444C24.7227 21.7513 24.7227 21.7513 24.7296 21.7583L28.5673 25.5959C29.2847 26.3064 29.2847 27.0377 28.5742 27.7759Z"></path></svg>
+                                    </div>
+                                    <div class="content">
+                                        <span>CALL ANY TIME</span>
+                                        <h6><a href="tel:+966533101111">+966 53 310 1111</a></h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-wrap">
+            <div class="container text-center py-4">
+                <p>Copyright 2024 <a href="index.html">Araf Real Estate</a> | Design By Zuvi8 Creatives</p>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- JS Logic for Tabs -->
+    <script>
+        function switchTab(evt, tabId) {
+            // Hide all panels
+            const panels = document.querySelectorAll('.ps-tab-content');
+            panels.forEach(p => p.classList.remove('active'));
+
+            // Remove active from all buttons
+            const buttons = document.querySelectorAll('.ps-tab-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // Show selected panel and set button active
+            document.getElementById(tabId).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
