@@ -51,8 +51,17 @@
 	// sticky header
 	window.addEventListener('scroll', function () {
 		const header = document.querySelector('.header-area');
+		const logo = document.querySelector('.header-logo img');
 		if (header) {
 			header.classList.toggle("sticky", window.scrollY > 50);
+			
+		}
+		if(this.window.location.pathname.includes("real-estate.html")||this.window.location.pathname.includes("index.html")){
+			if (header.classList.contains("sticky")) {
+				logo.src = "assets/img/Araf logo.jpeg";
+			} else {	
+				logo.src = "assets/img/header-logo-white.svg";
+			}
 		}
 	});
 	

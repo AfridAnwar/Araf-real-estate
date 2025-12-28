@@ -1919,6 +1919,13 @@ header.style-1 .nav-right .mobile-menu-btn {
   header.style-1 .nav-right .mobile-menu-btn svg {
     fill: var(--title-color);
   }
+  .header-area.style-1.sticky .nav-right .sidebar-button.mobile-menu-btn.white svg{
+    fill:var(--title-color);
+  }
+  header.style-1 .nav-right .sidebar-button.mobile-menu-btn.white svg{
+    fill: var(--white-color);
+  }
+ 
 }
 header.style-1 .nav-right .primary-btn {
   font-size: 15px;
@@ -7113,6 +7120,9 @@ header.style-3.two.sticky {
 @media (max-width: 767px) {
   .footer-section .footer-wrapper .footer-logo-and-contact-area {
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
   }
 }
 .footer-section .footer-wrapper .footer-logo-and-contact-area .footer-logo-area {
@@ -7122,6 +7132,7 @@ header.style-3.two.sticky {
 @media (max-width: 576px) {
   .footer-section .footer-wrapper .footer-logo-and-contact-area .footer-logo-area .footer-logo img {
     width: 150px;
+    justify-content: center;
   }
 }
 .footer-section .footer-wrapper .footer-logo-and-contact-area .footer-logo-area .footer-content {
@@ -7838,6 +7849,7 @@ header.style-3.two.sticky {
 @media (max-width: 1199px) {
   .footer-section.style-2 .footer-wrapper .footer-logo-and-contact-area .contact-area {
     padding-right: 0;
+    justify-content: center;
   }
 }
 .footer-section.style-2 .footer-wrapper .footer-logo-and-contact-area .contact-area::after {
@@ -22755,3 +22767,44 @@ header.style-3.two.sticky {
     margin-top: 35px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+
+
+/* Footer Media Query  */
+/* Footer Mobile Improvements */
+@media (max-width: 991.98px) {
+    .footer-logo-area {
+        text-align: center !important;
+    }
+    
+    .social-list {
+        flex-wrap: wrap;
+    }
+    
+    .contact-area .single-contact {
+        max-width: 300px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-bottom-right ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .social-list a {
+        font-size: 14px;
+    }
+    
+    .contact-area .content span {
+        font-size: 14px;
+    }
+    
+    .contact-area .content h6 {
+        font-size: 18px;
+    }
+}
+/* Ends */
