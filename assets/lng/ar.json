@@ -50,6 +50,9 @@
   "footer-privacy": "سياسة الخصوصية",
   "footer-say-hello": "تواصل معنا",
   "footer-terms": "الشروط والأحكام",
+  "footer-contact-address-label": "العنوان",
+  "footer-contact-address-val": "الدمام، المملكة العربية السعودية",
+  "footer-contact-call-label": "اتصل في أي وقت",
   "grid-btn-view": "عرض التفاصيل",
   "grid-subtitle": "منازل للبيع",
   "grid-title": "عقارات تناسب جميع أنماط الحياة.",
@@ -249,5 +252,16 @@
   "project-status-card-plushaven-title": "مشروع بلس هافن",
   "project-status-card-plushaven-type": "حي النهضة",
   "project-status-card-plushaven-loc": " مشروع سلطان 45",
-  "project-status-sold-label": "تم البيع"
+  "project-status-sold-label": "تم البيع",
+  "project-araf1-title": "أراف 1",
+  "project-araf2-title": "أراف 2",
+  "project-araf3-title": "أراف 3",
+  "project-araf4-title": "أراف 4",
+  "project-araf5-title": "أراف 5",
+  "project-araf6-title": "أراف 6",
+  "project-araf7-title": "أراف 7",
+  "project-araf8-title": "أراف 8",
+  "project-status-in-construction": "تحت الإنشاء",
+  "project-status-bidding": "مزايدة",
+  "project-status-successfully-completed": "تم الانتهاء بنجاح"
 }

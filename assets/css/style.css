@@ -8520,6 +8520,11 @@ header.style-3.two.sticky {
   gap: 40px;
   flex-wrap: wrap;
 }
+
+[dir="rtl"] .home2-service-section .service-list li h2 a {
+    font-size: 65px;
+}
+
 @media (min-width: 1200px) and (max-width: 1399px) {
   .home2-service-section .service-list {
     gap: 25px;
@@ -8533,6 +8538,9 @@ header.style-3.two.sticky {
 @media (max-width: 576px) {
   .home2-service-section .service-list {
     gap: 25px;
+  }
+  [dir="rtl"] .home2-service-section .service-list li h2 a {
+    font-size: 30px;
   }
 }
 .home2-service-section .service-list li h2 {
@@ -22808,3 +22816,8 @@ header.style-3.two.sticky {
     }
 }
 /* Ends */
+/* RTL Fix for Service List Images */
+[dir="rtl"] .home2-service-section .service-list li h2 a .service-img {
+  right: auto;
+  left: 0;
+}

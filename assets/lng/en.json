@@ -50,6 +50,9 @@
   "footer-privacy": "Privacy Policy",
   "footer-say-hello": "SAY HELLO",
   "footer-terms": "Terms & Conditions",
+  "footer-contact-address-label": "ADDRESS",
+  "footer-contact-address-val": "Dammam, Saudi Arabia",
+  "footer-contact-call-label": "CALL ANY TIME",
   "grid-btn-view": "View Details",
   "grid-subtitle": "Homes for Sale",
   "grid-title": "Properties for Every Lifestyle.",
@@ -249,5 +252,16 @@
   "project-status-card-plushaven-title": "Plus Haven Project",
   "project-status-card-plushaven-type": "Al Nahda District",
   "project-status-card-plushaven-loc": "Sultan Project 45",
-  "project-status-sold-label": "SOLD"
+  "project-status-sold-label": "SOLD",
+  "project-araf1-title": "Araf 1",
+  "project-araf2-title": "Araf 2",
+  "project-araf3-title": "Araf 3",
+  "project-araf4-title": "Araf 4",
+  "project-araf5-title": "Araf 5",
+  "project-araf6-title": "Araf 6",
+  "project-araf7-title": "Araf 7",
+  "project-araf8-title": "Araf 8",
+  "project-status-in-construction": "In construction",
+  "project-status-bidding": "Bidding",
+  "project-status-successfully-completed": "Successfully Completed"
 }
