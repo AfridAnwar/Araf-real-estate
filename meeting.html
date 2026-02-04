@@ -132,24 +132,24 @@
                 </div>
                <ul class="menu-list">
                     <li class="menu-item-has-children">
-                        <a href="real-estate.html" class="drop-down">HOME</a>
+                        <a href="real-estate.html" class="drop-down" lng-tag="meeting-nav-home">HOME</a>
                         
                     </li>
                     <li class="menu-item-has-children"> 
-                        <a href="project.html" class="drop-down">PROJECTS</a>
+                        <a href="project.html" class="drop-down" lng-tag="meeting-nav-projects">PROJECTS</a>
                         <i class="bi bi-plus dropdown-icon"></i>
                         <ul class="sub-menu">
                             <!-- <li><a href="project.html">PROJECTS</a></li> -->
-                            <li><a href="projectstatus.html">PROJECT STATUS</a></li>
+                            <li><a href="projectstatus.html" lng-tag="meeting-nav-project-status">PROJECT STATUS</a></li>
                         </ul>
                     </li>
-                    <li><a href="real-estate.html">ABOUT</a></li>
+                    <li><a href="real-estate.html" lng-tag="meeting-nav-about">ABOUT</a></li>
 
                     <li class="menu-item-has-children ">
-                        <a href="meeting.html" class="">BOOK A MEETING</a>
+                        <a href="meeting.html" class="" lng-tag="meeting-nav-book-meeting">BOOK A MEETING</a>
                     </li>
                    <li>
-                        <a href="contact.html">GET IN TOUCH  </a>
+                        <a href="contact.html" lng-tag="meeting-nav-get-in-touch">GET IN TOUCH  </a>
                    </li>
                     <li>
                         <div class="language-switcher mobile-lang-switcher homepage-only text-dark" style="
@@ -168,7 +168,7 @@
                 </ul>
                 <div class="btn-area d-lg-none d-flex justify-content-center">
                     <a href="contact.html" class="primary-btn">
-                        Get In Touch
+                        <span lng-tag="meeting-mobile-btn-get-touch">Get In Touch</span>
                         <svg viewbox="0 0 13 20">
                             <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
                         </svg>
@@ -196,10 +196,10 @@
             <div class="col-lg-12">
                 <div class="banner-content">
                     <!-- <span>Any Question Wit Us</span> -->
-                    <h1>Book a meeting</h1>
+                    <h1 lng-tag="meeting-breadcrumb-title">Book a meeting</h1>
                     <ul class="breadcrumb-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li>Book a meeting</li>
+                        <li><a href="index.html" lng-tag="meeting-breadcrumb-home">Home</a></li>
+                        <li lng-tag="meeting-breadcrumb-current">Book a meeting</li>
                     </ul>
                 </div>
             </div>
@@ -216,7 +216,7 @@
                 <div class="col-lg-5 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div class="contact-content">
                         <div class="section-title">
-                            <h2>Book a meeting</h2>
+                            <h2 lng-tag="meeting-section-title">Book a meeting</h2>
                         </div>
                         <svg width="8" height="143" viewbox="0 0 8 143" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.33333 3C1.33333 4.47276 2.52724 5.66667 4 5.66667C5.47276 5.66667 6.66667 4.47276 6.66667 3C6.66667 1.52724 5.47276 0.333333 4 0.333333C2.52724 0.333333 1.33333 1.52724 1.33333 3ZM3.64645 142.354C3.84171 142.549 4.1583 142.549 4.35356 142.354L7.53554 139.172C7.7308 138.976 7.7308 138.66 7.53554 138.464C7.34028 138.269 7.0237 138.269 6.82843 138.464L4.00001 141.293L1.17158 138.464C0.976317 138.269 0.659734 138.269 0.464472 138.464C0.26921 138.66 0.26921 138.976 0.464472 139.172L3.64645 142.354ZM3.5 3L3.50001 142L4.50001 142L4.5 3L3.5 3Z"></path>
@@ -233,35 +233,35 @@
                                 <!-- Name Field -->
                                 <div class="col-md-12">
                                     <div class="form-inner">
-                                        <label>Name <span style="color: red;">*</span></label>
+                                        <label lng-tag="meeting-form-label-name">Name <span style="color: red;">*</span></label>
                                         <input type="text" required>
                                     </div>
                                 </div>
                                 <!-- Nickname Field -->
                                 <div class="col-md-12">
                                     <div class="form-inner">
-                                        <label>Nickname <span style="color: red;">*</span></label>
+                                        <label lng-tag="meeting-form-label-nickname">Nickname <span style="color: red;">*</span></label>
                                         <input type="text" required>
                                     </div>
                                 </div>
                                 <!-- Phone number Field -->
                                 <div class="col-md-12">
                                     <div class="form-inner">
-                                        <label>Phone number <span style="color: red;">*</span></label>
+                                        <label lng-tag="meeting-form-label-phone">Phone number <span style="color: red;">*</span></label>
                                         <input type="text" placeholder="051 234 5678" required>
                                     </div>
                                 </div>
                                 <!-- Email Field -->
                                 <div class="col-md-12">
                                     <div class="form-inner">
-                                        <label>Email <span style="color: red;">*</span></label>
+                                        <label lng-tag="meeting-form-label-email">Email <span style="color: red;">*</span></label>
                                         <input type="email" required>
                                     </div>
                                 </div>
                                 <!-- Meeting date Field -->
                                 <div class="col-md-12">
                                     <div class="form-inner">
-                                        <label>Meeting date <span style="color: red;">*</span></label>
+                                        <label lng-tag="meeting-form-label-date">Meeting date <span style="color: red;">*</span></label>
                                         <input type="text" placeholder="xx/xx/xxxx" required>
                                     </div>
                                 </div>
@@ -276,12 +276,12 @@
                                     <div class="mt-4">
                                         <div class="custom-radio mb-4">
                                             <input type="radio" name="meetingType" id="online" value="online" checked>
-                                            <label for="online">Online</label>
+                                            <label for="online" lng-tag="meeting-form-radio-online">Online</label>
                                         </div>
                             
                                         <div class="custom-radio">
                                             <input type="radio" name="meetingType" id="office" value="office">
-                                            <label for="office">Visit the office</label>
+                                            <label for="office" lng-tag="meeting-form-radio-office">Visit the office</label>
                                         </div>
                                     </div>
                                 </div>
@@ -291,7 +291,7 @@
                         <div class="col-md-12 mt-4">
                             <button type="submit" class="primary-btn2" style="background-color: #000; color: #fff; width: 100%; border: none; padding: 18px; display: flex; align-items: center; justify-content: center; text-transform: uppercase; font-weight: 500; letter-spacing: 1px;">
                                 <span style="border-bottom: 1px solid #fff; display: flex; align-items: center;">
-                                    SUBMIT 
+                                    <span lng-tag="meeting-form-btn-submit">SUBMIT</span>
                                     <svg width="15" height="15" viewBox="0 0 20 20" style="margin-left: 8px; fill: none; stroke: #fff; stroke-width: 2;">
                                         <line x1="2" y1="2" x2="18" y2="18"></line>
                                         <polyline points="8,18 18,18 18,8"></polyline>
@@ -331,30 +331,30 @@
                                 <img src="assets/img/footer-logo.svg" alt="">
                             </a>
                             <div class="footer-content">
-                                <p>Welcome to Araf Real Estate, where innovation meet our passion in a journey that started dream.</p>
+                                <p lng-tag="meeting-footer-desc">Welcome to Araf Real Estate, where innovation meet our passion in a journey that started dream.</p>
                                 <ul class="social-list">
                                     <li>
                                         <a href="https://www.linkedin.com/">
                                             <i class="bi bi-linkedin"></i>
-                                            <span>LinkedIn</span>
+                                            <span lng-tag="meeting-footer-social-linkedin">LinkedIn</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.facebook.com/">
                                             <i class="bi bi-facebook"></i>
-                                            <span>Facebook</span>
+                                            <span lng-tag="meeting-footer-social-facebook">Facebook</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://twitter.com/">
                                             <i class="bi bi-twitter-x"></i>
-                                            <span>Twitter</span>
+                                            <span lng-tag="meeting-footer-social-twitter">Twitter</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/">
                                             <i class="bi bi-instagram"></i>
-                                            <span>Instagram</span>
+                                            <span lng-tag="meeting-footer-social-instagram">Instagram</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -371,7 +371,7 @@
                                         </svg>
                                     </div>
                                     <div class="content">
-                                        <span>CALL ANY TIME</span>
+                                        <span lng-tag="meeting-footer-contact-call-label">CALL ANY TIME</span>
                                         <h6><a href="tel:+966 53 310 1111">+966 53 310 1111</a></h6>
                                     </div>
                                 </div>
@@ -388,8 +388,8 @@
                                         </svg>
                                     </div>
                                     <div class="content">
-                                        <span>ADDRESS</span>
-                                        <h6><a href="#">Dammam, Saudi Arabia</a></h6>
+                                        <span lng-tag="meeting-footer-contact-address-label">ADDRESS</span>
+                                        <h6><a href="#" lng-tag="meeting-footer-contact-address-val">Dammam, Saudi Arabia</a></h6>
                                     </div>
                                 </div>
                                 <svg class="arrow" width="8" height="29" viewbox="0 0 8 29" xmlns="http://www.w3.org/2000/svg">
@@ -404,7 +404,7 @@
                                         </svg>
                                     </div>
                                     <div class="content">
-                                        <span>SAY HELLO</span>
+                                        <span lng-tag="meeting-footer-contact-hello-label">SAY HELLO</span>
                                         <h6><a href="/cdn-cgi/l/email-protection#88e1e6eee7c8edf0e9e5f8e4eda6ebe7e5"><span class="__cf_email__" data-cfemail="761f18101936130e171b061a135815191b">info@araf.sa</span></a></h6>
                                     </div>
                                 </div>
@@ -418,13 +418,13 @@
             <div class="container">
                 <div class="footer-bottom">
                     <div class="copyright-area">
-                        <p>Copyright 2024 <a href="index.html">Araf Real Estate</a> | Design By <a href="https://www.zuvi8.com/">Zuvi8 Creatives</a></p>
+                        <p lng-tag="meeting-footer-copyright">Copyright 2024 <a href="index.html">Araf Real Estate</a> | Design By <a href="https://www.zuvi8.com/">Zuvi8 Creatives</a></p>
                     </div>
                     <div class="footer-bottom-right">
                         <ul>
-                            <li><a href="#">Support Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#" lng-tag="meeting-footer-link-policy">Support Policy</a></li>
+                            <li><a href="#" lng-tag="meeting-footer-link-terms">Terms & Conditions</a></li>
+                            <li><a href="#" lng-tag="meeting-footer-link-privacy">Privacy Policy</a></li>
                         </ul>
                     </div>
                 </div>
@@ -456,6 +456,7 @@
     <!-- Marquee  JS -->
     <script src="assets/js/jquery.marquee.min.js"></script>
     <!-- GSAP  JS -->
+    <script src="./assets/js/translate.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/simpleParallax.min.js"></script>

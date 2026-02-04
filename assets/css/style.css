@@ -101,7 +101,7 @@ Version: 1.0
 /*===========================
   01.COMMON CSS 
 ===========================*/
-@import url("../../../../../css2");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --font-kanit: "Kanit", sans-serif;
   --font-inter: "Inter", sans-serif;
