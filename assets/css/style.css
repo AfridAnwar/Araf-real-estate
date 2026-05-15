@@ -22852,11 +22852,13 @@ header.style-3.two.sticky {
 }
 
 .luxury-header .header-logo a img {
-  width: 130px;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
   transition: opacity 0.3s;
 }
 @media (max-width: 576px) {
-  .luxury-header .header-logo a img { width: 110px; }
+  .luxury-header .header-logo a img { height: 40px; }
 }
 .luxury-header .header-logo a:hover img {
   opacity: 0.7;
