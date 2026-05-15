@@ -79,7 +79,22 @@
 
     <!-- Hero Section Start -->
     <section class="luxury-hero">
-        <div class="hero-image" style="background-image: url(assets/img/home1/home1-banner-img1.jpg);"></div>
+        <div class="swiper luxury-hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-slide-bg" style="background-image: url(assets/img/home1/home1-banner-img1.jpg);"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-slide-bg" style="background-image: url(assets/img/home1/home1-banner-img2.jpg);"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-slide-bg" style="background-image: url(assets/img/home1/home1-banner-img3.jpg);"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-slide-bg" style="background-image: url(assets/img/home1/home1-banner-img4.jpg);"></div>
+                </div>
+            </div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 lng-tag="hero-title">With us, every detail tells a story of excellence and quality.</h1>
@@ -89,6 +104,9 @@
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
             </a>
+        </div>
+        <div class="hero-slide-progress">
+            <div class="hero-slide-progress-bar"></div>
         </div>
     </section>
     <!-- Hero Section End -->
@@ -851,6 +869,62 @@
                 });
             }
         }
+    })();
+    </script>
+
+    <!-- Luxury Hero Slider -->
+    <script>
+    (function() {
+        var heroSlider = new Swiper('.luxury-hero-slider', {
+            slidesPerView: 1,
+            speed: 1800,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            on: {
+                init: function() {
+                    var activeSlide = this.slides[this.activeIndex];
+                    if (activeSlide) {
+                        var bg = activeSlide.querySelector('.hero-slide-bg');
+                        if (bg) bg.classList.add('zoom-active');
+                    }
+                    var bar = document.querySelector('.hero-slide-progress-bar');
+                    if (bar) {
+                        bar.style.transition = 'none';
+                        bar.style.width = '0%';
+                        setTimeout(function() {
+                            bar.style.transition = 'width 5000ms linear';
+                            bar.style.width = '100%';
+                        }, 50);
+                    }
+                },
+                slideChangeTransitionStart: function() {
+                    var slides = this.slides;
+                    for (var i = 0; i < slides.length; i++) {
+                        var bg = slides[i].querySelector('.hero-slide-bg');
+                        if (bg) bg.classList.remove('zoom-active');
+                    }
+                    var activeSlide = slides[this.activeIndex];
+                    if (activeSlide) {
+                        var bg = activeSlide.querySelector('.hero-slide-bg');
+                        if (bg) bg.classList.add('zoom-active');
+                    }
+                    var bar = document.querySelector('.hero-slide-progress-bar');
+                    if (bar) {
+                        bar.style.transition = 'none';
+                        bar.style.width = '0%';
+                        setTimeout(function() {
+                            bar.style.transition = 'width 5000ms linear';
+                            bar.style.width = '100%';
+                        }, 50);
+                    }
+                }
+            }
+        });
     })();
     </script>
 
