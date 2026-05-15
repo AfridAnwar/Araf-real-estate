@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <!-- Required meta tags -->
@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Title -->
-    <title>Araf Real Estate.</title>
+    <title>أعراف العقارية</title>
     <link rel="icon" href="assets/img/fav-icon.svg" type="image/gif" sizes="20x20">
     
 </head>
@@ -34,24 +34,24 @@
     <header class="luxury-header" id="luxury-header">
         <div class="header-inner">
             <div class="header-logo">
-                <a href="real-estate.html"><img alt="Araf Real Estate" class="img-fluid" src="assets/img/header-logo.svg"></a>
+                <a href="real-estate-ar.html"><img alt="أعراف العقارية" class="img-fluid" src="assets/img/header-logo.svg"></a>
             </div>
             <nav>
                 <ul class="luxury-nav">
-                    <li><a href="real-estate.html" lng-tag="navHome">HOME</a></li>
-                    <li><a href="project.html">PROJECTS</a></li>
-                    <li><a href="real-estate.html" lng-tag="navAbout">ABOUT</a></li>
-                    <li><a href="meeting.html">BOOK A MEETING</a></li>
-                    <li><a href="contact.html" lng-tag="header-get-touch">GET IN TOUCH</a></li>
+                    <li><a href="real-estate-ar.html">الرئيسية</a></li>
+                    <li><a href="project.html">المشاريع</a></li>
+                    <li><a href="real-estate-ar.html">من نحن</a></li>
+                    <li><a href="meeting.html">حجز اجتماع</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
                 </ul>
             </nav>
             <div class="d-flex align-items-center" style="gap: 24px;">
                 <div class="luxury-lang-switcher">
-                    <a href="#" id="enTranslator" class="active">EN</a>
+                    <a href="real-estate.html" id="enTranslator">EN</a>
                     <span class="lang-divider">|</span>
-                    <a href="real-estate-ar.html" id="arTranslator">عربي</a>
+                    <a href="#" id="arTranslator" class="active">عربي</a>
                 </div>
-                <div class="luxury-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <div class="luxury-menu-toggle" id="mobileMenuToggle" aria-label="قائمة التنقل">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -63,16 +63,16 @@
     <!-- Mobile Nav -->
     <div class="luxury-mobile-nav" id="mobileNav">
         <ul>
-            <li><a href="real-estate.html" lng-tag="navHome">HOME</a></li>
-            <li><a href="project.html">PROJECTS</a></li>
-            <li><a href="real-estate.html" lng-tag="navAbout">ABOUT</a></li>
-            <li><a href="meeting.html">BOOK A MEETING</a></li>
-            <li><a href="contact.html" lng-tag="header-get-touch">GET IN TOUCH</a></li>
+            <li><a href="real-estate-ar.html">الرئيسية</a></li>
+            <li><a href="project.html">المشاريع</a></li>
+            <li><a href="real-estate-ar.html">من نحن</a></li>
+            <li><a href="meeting.html">حجز اجتماع</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
         </ul>
         <div class="mobile-lang">
-            <a href="#" id="enTranslatorMobile" class="active">EN</a>
+            <a href="real-estate.html" id="enTranslatorMobile">EN</a>
             <span class="lang-divider">|</span>
-            <a href="real-estate-ar.html" id="arTranslatorMobile">عربي</a>
+            <a href="#" id="arTranslatorMobile" class="active">عربي</a>
         </div>
     </div>
     <!-- Header End -->
@@ -82,9 +82,9 @@
         <div class="hero-image" style="background-image: url(assets/img/home1/home1-banner-img1.jpg);"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 lng-tag="hero-title">With us, every detail tells a story of excellence and quality.</h1>
+            <h1>معنا كل تفصيل يحكي قصة تميز وجودة</h1>
             <a href="contact.html" class="hero-cta">
-                <span lng-tag="hero-btn">Start A Project</span>
+                <span>ابدأ مشروعاً</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -852,6 +852,13 @@
             }
         }
     })();
+
+    // Auto-load Arabic translations for the RTL page
+    $(document).ready(function() {
+        var translate = new Translate();
+        translate.init('lng-tag', 'ar');
+        translate.process();
+    });
     </script>
 
 <script defer="" src="../../../beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"70834e4b23964a2eaf7cf4ec0e5e9a84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
