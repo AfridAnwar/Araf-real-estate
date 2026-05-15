@@ -103,10 +103,12 @@ Version: 1.0
 ===========================*/
 @import url("../../../../../css2");
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 :root {
   --font-kanit: "Kanit", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-tajawal: "Tajawal", sans-serif;
+  --font-playfair: "Playfair Display", serif;
   --primary-color: #000000;
   --primary-color-opc: 0, 0, 0;
   --primary-color2: #F94834;
@@ -23246,6 +23248,223 @@ header.style-3.two.sticky {
 /* Utility: gold accent */
 .text-gold {
   color: var(--gold-color) !important;
+}
+
+/* ========================================
+   Luxury About Section (Retal-inspired)
+======================================== */
+.luxury-about {
+  padding: 120px 0;
+  background: #fff;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .luxury-about { padding: 80px 0; }
+}
+@media (max-width: 576px) {
+  .luxury-about { padding: 60px 0; }
+}
+
+.luxury-about .about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 1199px) {
+  .luxury-about .about-grid { gap: 50px; padding: 0 30px; }
+}
+@media (max-width: 991px) {
+  .luxury-about .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+}
+
+.luxury-about .about-image-col {
+  position: relative;
+  overflow: hidden;
+}
+.luxury-about .about-image-col img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 1199px) {
+  .luxury-about .about-image-col img { height: 480px; }
+}
+@media (max-width: 991px) {
+  .luxury-about .about-image-col img { height: 400px; }
+}
+@media (max-width: 576px) {
+  .luxury-about .about-image-col img { height: 300px; }
+}
+
+.luxury-about .about-text-col {
+  padding: 20px 0;
+}
+
+.luxury-about .about-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-tajawal);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 32px;
+}
+.luxury-about .about-label::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #999;
+}
+
+.luxury-about .about-heading {
+  font-family: var(--font-playfair);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+}
+.luxury-about .about-heading .accent {
+  color: var(--gold-color);
+  font-style: italic;
+}
+@media (max-width: 1399px) {
+  .luxury-about .about-heading { font-size: 38px; }
+}
+@media (max-width: 991px) {
+  .luxury-about .about-heading { font-size: 34px; margin-bottom: 24px; }
+}
+@media (max-width: 576px) {
+  .luxury-about .about-heading { font-size: 28px; margin-bottom: 20px; }
+}
+
+.luxury-about .about-body {
+  font-family: var(--font-tajawal);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+@media (max-width: 991px) {
+  .luxury-about .about-body { max-width: 100%; margin-bottom: 30px; }
+}
+
+.luxury-about .about-stats {
+  display: flex;
+  gap: 48px;
+  padding-top: 40px;
+  border-top: 1px solid #e8e8e8;
+}
+@media (max-width: 576px) {
+  .luxury-about .about-stats { gap: 32px; padding-top: 28px; }
+}
+
+.luxury-about .about-stat-item h3 {
+  font-family: var(--font-playfair);
+  font-size: 42px;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+@media (max-width: 576px) {
+  .luxury-about .about-stat-item h3 { font-size: 32px; }
+}
+.luxury-about .about-stat-item span {
+  font-family: var(--font-tajawal);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.luxury-about .about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-tajawal);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-decoration: none;
+  margin-top: 40px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #1a1a1a;
+  transition: all 0.4s ease;
+}
+.luxury-about .about-cta:hover {
+  color: var(--gold-color);
+  border-color: var(--gold-color);
+}
+.luxury-about .about-cta svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  transition: transform 0.3s;
+}
+.luxury-about .about-cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* RTL About Section */
+[dir="rtl"] .luxury-about .about-grid {
+  direction: rtl;
+}
+[dir="rtl"] .luxury-about .about-label {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .luxury-about .about-label::before {
+  order: -1;
+}
+[dir="rtl"] .luxury-about .about-text-col {
+  text-align: right;
+}
+[dir="rtl"] .luxury-about .about-body {
+  margin-left: auto;
+  margin-right: 0;
+}
+[dir="rtl"] .luxury-about .about-stats {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+[dir="rtl"] .luxury-about .about-cta svg {
+  transform: scaleX(-1);
+}
+[dir="rtl"] .luxury-about .about-cta:hover svg {
+  transform: scaleX(-1) translateX(4px);
+}
+@media (min-width: 992px) {
+  [dir="rtl"] .luxury-about .about-image-col {
+    order: 2;
+  }
+  [dir="rtl"] .luxury-about .about-text-col {
+    order: 1;
+  }
+}
+
+/* GSAP fade-in initial states */
+.luxury-about .gsap-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
 }
 
 /* Ends */

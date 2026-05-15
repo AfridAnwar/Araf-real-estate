@@ -111,53 +111,40 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Home2 About Section Start -->
-    <div class="home2-about-section mb-120">
-        <div class="container">
-            <div class="row mb-60 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                <div class="col-lg-7">
-                    <div class="section-title two">
-                        <span lng-tag="about-subtitle">Your Local Real Estate Authority</span>
-                        <h2 lng-tag="about-title">Building Relationships, Building Homes.</h2>
-                    </div>
-                </div>
+    <!-- Luxury About Section Start -->
+    <section class="luxury-about">
+        <div class="about-grid">
+            <div class="about-image-col gsap-fade-up">
+                <img src="assets/img/home2/home2-about-img.jpg" alt="مشروع أراف العقارية">
             </div>
-            <div class="row gy-lg-5 gy-4">
-                <div class="col-lg-5">
-                    <div class="about-img magnetic-item">
-                        <img src="assets/img/home2/home2-about-img.jpg" alt="">
+            <div class="about-text-col gsap-fade-up">
+                <div class="about-label" lng-tag="about-subtitle">عن أراف</div>
+                <h2 class="about-heading" lng-tag="about-heading">بناء <span class="accent">علاقات،</span> بناء منازل بامتياز.</h2>
+                <p class="about-body" lng-tag="about-text-1">نحن شركة أراف العقارية، شركة وطنية متخصصة في التطوير العقاري. نضع الجودة والابتكار في صميم كل مشروع ننفذه. منذ تأسيسنا قبل أكثر من ٦ سنوات، رسمنا مسيرتنا بثقة نحو الريادة في تقديم حلول عمرانية تواكب تطلعات الأفراد والمستثمرين.</p>
+                <div class="about-stats">
+                    <div class="about-stat-item">
+                        <h3>+٤٥</h3>
+                        <span lng-tag="stat-projects">مشروع</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <h3>+٦</h3>
+                        <span lng-tag="stat-years">سنوات</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <h3>+٥٠</h3>
+                        <span lng-tag="stat-lands">أراضي مطورة</span>
                     </div>
                 </div>
-                <div class="col-lg-7 d-flex align-items-lg-end wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    <div class="about-content">
-                        <p><span lng-tag="about-text-1">We are Araf Real Estate Company, a national company specialized in real estate development. We place quality and innovation at the heart of every project we execute.</span>  
-                        <span lng-tag="about-text-2">Since our establishment more than [6] years ago, we have charted our path with confidence toward leadership in providing urban solutions that keep pace with the aspirations of individuals and investors, contributing to building modern and sustainable communities.</span></p>
-                        <a href="assets/img/pdf/أراف نارسس (1).pdf" class="primary-btn2">
-                            <span>
-                                <span lng-tag="about-btn">About Us More</span>
-                                <svg viewbox="0 0 13 20">
-                                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
-                                </svg>
-                            </span>
-                        </a>
-                        <div class="about-bottom-content">
-                            <ul>
-                                <li>
-                                    <h5 lng-tag="vision-title">Our Vision</h5>
-                                    <p lng-tag="vision-text">To be among the leading real estate development companies in the Kingdom, relied upon to deliver high-quality projects, smart designs, and an inspiring environment for living, working, and investing.</p>
-                                </li>
-                                <li>
-                                    <h5 lng-tag="mission-title">Our Mission</h5>
-                                    <p lng-tag="mission-text">To contribute to developing the Kingdom's urban landscape through qualitative projects that reflect the spirit of urban development, meet residents' needs, and achieve long-term economic and social value.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <a href="assets/img/pdf/أراف نارسس (1).pdf" class="about-cta">
+                    <span lng-tag="about-btn">اكتشف المزيد</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         </div>
-    </div>
-    <!-- Home2 About Section End -->
+    </section>
+    <!-- Luxury About Section End -->
 
     <!-- Home2 Service Section Start -->
     <div class="home2-service-section mb-120">
@@ -931,6 +918,31 @@
                     }
                 }
             }
+        });
+    })();
+    </script>
+
+    <!-- GSAP About Section Animation -->
+    <script>
+    (function() {
+        gsap.registerPlugin(ScrollTrigger);
+        var fadeEls = document.querySelectorAll('.luxury-about .gsap-fade-up');
+        fadeEls.forEach(function(el, i) {
+            gsap.fromTo(el,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    delay: i * 0.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 85%',
+                        once: true
+                    }
+                }
+            );
         });
     })();
     </script>
