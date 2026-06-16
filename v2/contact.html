@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title lng-tag="meta-contact-title">Contact Us | Araf Real Estate</title>
+    <link rel="icon" href="assets/img/logo/logo.png" type="image/png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .page-header {
+            padding: 250px 0 120px;
+            background-color: var(--charcoal);
+            background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('assets/img/inner-pages/contact-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+        }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 6vw, 6.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            padding: 100px 5vw;
+        }
+        @media (min-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 4fr 8fr;
+                gap: 120px;
+                padding: 120px 8vw;
+            }
+        }
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .info-block {
+            margin-bottom: 40px;
+        }
+        .info-block h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--stone);
+            margin-bottom: 8px;
+        }
+        .info-block p, .info-block a {
+            font-size: 20px;
+            color: var(--charcoal);
+            text-decoration: none;
+        }
+        .info-block a:hover {
+            color: var(--bronze);
+        }
+        
+        /* Editorial Form Styling */
+        .form-group {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .form-control {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--stone);
+            padding: 15px 0;
+            font-family: var(--font-sans);
+            font-size: 18px;
+            color: var(--charcoal);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-bottom-color: var(--charcoal);
+        }
+        .form-control::placeholder {
+            color: transparent;
+        }
+        .form-label {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            font-size: 18px;
+            color: var(--graphite);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .form-control:focus ~ .form-label,
+        .form-control:not(:placeholder-shown) ~ .form-label {
+            top: -20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--charcoal);
+        }
+        textarea.form-control {
+            resize: none;
+            height: 100px;
+        }
+        .form-check {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        .form-check input {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--charcoal);
+        }
+        .form-check label {
+            font-size: 14px;
+            color: var(--graphite);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Map Section */
+        .map-section {
+            width: 100%;
+            height: 60vh;
+            filter: grayscale(100%) contrast(120%) sepia(20%); /* Architectural monochrome look */
+            margin-bottom: -10px; /* Removes bottom gap */
+            transition: filter 0.6s ease;
+        }
+        .map-section:hover {
+            filter: grayscale(0%) contrast(100%) sepia(0%);
+        }
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="index.html" class="logo">
+            <img src="assets/img/logo/logo.png" alt="Araf Logo">
+        </a>
+        
+        <nav class="nav-links">
+            <a href="index.html" lng-tag="nav-home">Home</a>
+            <a href="projects.html" lng-tag="nav-projects">Projects</a>
+            <a href="about.html" lng-tag="nav-about">About Us</a>
+            <a href="project-status.html" lng-tag="nav-status">Project Status</a>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="lang-switch">
+                <a href="#" class="active" onclick="changeLanguage('en')">EN</a>
+                <span>|</span>
+                <a href="#" onclick="changeLanguage('ar')">عربي</a>
+            </div>
+            <a href="meeting.html" class="btn btn-outline" lng-tag="nav-meeting">Book a Meeting</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav-links">
+                <a href="index.html" lng-tag="nav-home">Home</a>
+                <a href="projects.html" lng-tag="nav-projects">Projects</a>
+                <a href="about.html" lng-tag="nav-about">About Us</a>
+                <a href="project-status.html" lng-tag="nav-status">Project Status</a>
+            </nav>
+            <div class="mobile-actions">
+                <div class="lang-switch-mobile">
+                    <a href="#" class="active" onclick="changeLanguage('en')">EN</a>
+                    <span>|</span>
+                    <a href="#" onclick="changeLanguage('ar')">عربي</a>
+                </div>
+                <a href="meeting.html" class="btn btn-primary" lng-tag="nav-meeting" style="margin-top: 20px; width: 100%; text-align: center;">Book a Meeting</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-header">
+            <div class="container">
+                <div class="section-label gs-reveal" style="color: rgba(255,255,255,0.7);" lng-tag="contact-banner-subtitle">Any Question With Us</div>
+                <h1 class="gs-reveal" style="color: var(--white);" lng-tag="contact-banner-title">Get in touch.</h1>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container contact-grid">
+                
+                <!-- Left: Info -->
+                <div class="contact-info gs-reveal">
+                    <h3 lng-tag="contact-section-title">Connect with our team.</h3>
+                    
+                    <div class="info-block">
+                        <h4 lng-tag="contact-list-inquiry">To More Inquiry</h4>
+                        <a href="tel:+966533101111" lng-tag="global-phone-number" dir="ltr">+966 53 310 1111</a>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4 lng-tag="contact-list-mail">To Send Mail</h4>
+                        <a href="mailto:info@araf.sa">info@araf.sa</a>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4 lng-tag="sidebar-address-label">ADDRESS</h4>
+                        <p lng-tag="footer-address">Dammam, Saudi Arabia</p>
+                    </div>
+                </div>
+                
+                <!-- Right: Form -->
+                <div class="contact-form gs-reveal">
+                    <form onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fullName" placeholder=" ">
+                            <label for="fullName" class="form-label" lng-tag="contact-form-name">Full Name *</label>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder=" ">
+                                <label for="email" class="form-label" lng-tag="contact-form-email">Email *</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="phone" placeholder=" ">
+                                <label for="phone" class="form-label" lng-tag="contact-form-phone">Phone *</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select class="form-control" id="serviceType" style="cursor: pointer; padding-right: 20px;">
+                                <option value="" disabled selected lng-tag="contact-form-service">Select Service Type</option>
+                                <option value="Conceptual Design" lng-tag="contact-form-option-1">Conceptual Design</option>
+                                <option value="Project Planning" lng-tag="contact-form-option-2">Project Planning</option>
+                                <option value="Site Analysis" lng-tag="contact-form-option-3">Site Analysis</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" placeholder=" "></textarea>
+                            <label for="message" class="form-label" lng-tag="contact-form-message">Message *</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="termsCheck" required>
+                            <label for="termsCheck" lng-tag="contact-form-terms">I have read & accepted Terms & Conditions.</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" lng-tag="contact-form-submit">Submit Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Office Info Section -->
+        <section class="section" style="background-color: var(--charcoal); color: var(--white); padding: 120px 0;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center;">
+                <style>
+                    @media (min-width: 992px) {
+                        .office-grid-inner { grid-template-columns: 1fr 1fr; gap: 80px; display: grid; align-items: center; }
+                    }
+                </style>
+                <div class="office-grid-inner">
+                    <div class="office-image gs-reveal">
+                        <img src="assets/img/inner-pages/office-reception.jpg" alt="Araf Reception" style="width: 100%; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                    </div>
+                    <div class="office-text gs-reveal">
+                        <div class="section-label" style="color: rgba(255,255,255,0.6);" lng-tag="office-subtitle">Headquarters</div>
+                        <h2 style="font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 300; margin-bottom: 30px;" lng-tag="office-title">Welcome to Araf</h2>
+                        <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin-bottom: 40px;" lng-tag="office-desc">Experience our commitment to excellence firsthand. Our headquarters in Dammam is designed to reflect the quality, innovation, and architectural beauty we bring to every real estate project.</p>
+                        <a href="tel:+966533101111" class="btn btn-outline" style="border-color: var(--white); color: var(--white);" onmouseover="this.style.backgroundColor='var(--white)'; this.style.color='var(--charcoal)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--white)'" lng-tag="office-btn">Call for Directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <div class="map-section gs-reveal">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114275.17491807285!2d49.92595852225084!3d26.484750143048384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49fd003a48f599%3A0xc96d7abdaa1accfd!2z2KfYsdin2YEg2KfZhNi52YLYp9ix2YrYqSAtIEFSQUY!5e0!3m2!1sen!2ssa!4v1766995874864!5m2!1sen!2ssa"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/img/logo/logo.png" alt="Araf" class="footer-logo">
+                    <p style="font-size: 14px;" lng-tag="footer-tagline">Where vision meets structure. Premium real estate development across Saudi Arabia.</p>
+                    <div class="social-links">
+                        <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                        <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 lng-tag="footer-col-1">Properties</h4>
+                    <ul class="footer-links">
+                        <li><a href="project-detail.html" lng-tag="proj-1-title">Araf 1</a></li>
+                        <li><a href="project-detail.html" lng-tag="proj-2-title">Araf 2</a></li>
+                        <li><a href="project-detail.html" lng-tag="proj-3-title">Araf 3</a></li>
+                        <li><a href="project-detail.html" lng-tag="proj-4-title">Araf 4</a></li>
+                        <li><a href="project-detail.html" lng-tag="proj-5-title">Araf 5</a></li>
+                        <li><a href="projects.html" lng-tag="footer-view-all">View All →</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 lng-tag="footer-col-2">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" lng-tag="nav-about">About Us</a></li>
+                        <li><a href="project-status.html" lng-tag="nav-status">Project Status</a></li>
+                        <li><a href="assets/أراف نارسس (1).pdf" target="_blank" lng-tag="journey-btn">Company Profile</a></li>
+                        <li><a href="contact.html" lng-tag="nav-contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 lng-tag="footer-col-3">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+966533101111" style="font-family: var(--font-display); font-size: 20px;">+966 53 310 1111</a></li>
+                        <li><a href="mailto:info@araf.sa">info@araf.sa</a></li>
+                        <li style="margin-top: 16px; line-height: 1.5;" lng-tag="footer-address">Dammam, Saudi Arabia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright" lng-tag="footer-copyright">© 2026 Araf Real Estate. All rights reserved.</div>
+                <div class="footer-legal">
+                    <a href="#" lng-tag="footer-privacy">Privacy Policy</a>
+                    <a href="#" lng-tag="footer-terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
