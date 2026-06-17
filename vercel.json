@@ -1,0 +1,10 @@
+{
+  "buildCommand": "./build.sh",
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/v3/(.*)",
+      "destination": "/v3/index.html"
+    }
+  ]
+}

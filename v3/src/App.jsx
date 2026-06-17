@@ -83,7 +83,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/v3">
       <Preloader />
       <CustomCursor />
       <ScrollToTop />
