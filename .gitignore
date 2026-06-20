@@ -104,4 +104,12 @@ dist
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Build Output
 public/
+
+# Custom Project Ignores
+.planning/
+*.py
+/fav-icon.png
+/favicon.ico
