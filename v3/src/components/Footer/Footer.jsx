@@ -35,7 +35,7 @@ export default function Footer() {
               <li><Link to="/projects/araf-2" className="hover:text-accent transition-colors">{t('proj-2-title')}</Link></li>
               <li><Link to="/projects/araf-3" className="hover:text-accent transition-colors">{t('proj-3-title')}</Link></li>
               <li><Link to="/projects/araf-4" className="hover:text-accent transition-colors">{t('proj-4-title')}</Link></li>
-              <li><Link to="/projects" className="text-accent hover:text-text-primary transition-colors flex items-center gap-2 mt-2">{t('footer-view-all')}</Link></li>
+              <li><Link to="/projects" className="text-accent hover:text-text-primary transition-colors flex items-center gap-2 mt-2"><span dangerouslySetInnerHTML={{ __html: t('footer-view-all') }} /></Link></li>
             </ul>
           </div>
 
