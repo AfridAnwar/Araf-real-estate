@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           {/* Brand Col */}
           <div className="flex flex-col gap-6">
-            <img src="/assets/img/logo/logo.png" alt="Araf Logo" className="h-16 object-contain self-start" />
+            <img src="/v3/assets/img/logo/logo.png" alt="Araf Logo" className="h-24 w-auto object-contain self-start" />
             <p className="text-text-secondary text-sm max-w-xs leading-relaxed">
               {t('footer-tagline')}
             </p>
@@ -45,7 +45,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-4 text-text-secondary">
               <li><Link to="/about" className="hover:text-accent transition-colors">{t('nav-about')}</Link></li>
               <li><Link to="/project-status" className="hover:text-accent transition-colors">{t('nav-status')}</Link></li>
-              <li><a href="/assets/أراف نارسس (1).pdf" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">{t('journey-btn')}</a></li>
+              <li><a href="/v3/assets/أراف نارسس (1).pdf" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">{t('journey-btn')}</a></li>
               <li><Link to="/contact" className="hover:text-accent transition-colors">{t('nav-contact')}</Link></li>
             </ul>
           </div>

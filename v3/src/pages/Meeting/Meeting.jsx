@@ -63,7 +63,7 @@ export default function Meeting() {
         <div className="absolute inset-0 z-0">
           <div ref={heroBgRef} className="absolute inset-x-0 -top-[20%] h-[140%] w-full">
             <img 
-              src="/assets/img/inner-pages/meeting-hero.jpg" 
+              src="/v3/assets/img/inner-pages/meeting-hero.jpg" 
               alt="Book Meeting" 
               className="w-full h-full object-cover grayscale-[30%]"
             />
@@ -193,7 +193,7 @@ export default function Meeting() {
             
             <div className="sec-reveal">
               <div className="aspect-[4/3] w-full overflow-hidden shadow-2xl">
-                <img src="/assets/img/inner-pages/office-reception.jpg" alt="Araf HQ" className="w-full h-full object-cover" />
+                <img src="/v3/assets/img/inner-pages/office-reception.jpg" alt="Araf HQ" className="w-full h-full object-cover" />
               </div>
             </div>
 

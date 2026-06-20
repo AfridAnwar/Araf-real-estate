@@ -56,7 +56,7 @@
 			header.classList.toggle("sticky", window.scrollY > 50);
 
 		}
-		if (this.window.location.pathname.includes("real-estate.html") || this.window.location.pathname.includes("index.html")) {
+		if (this.window.location.pathname.includes("index.html") || this.window.location.pathname.includes("index.html")) {
 			if (header.classList.contains("sticky")) {
 				logo.src = "assets/img/logo.png";
 			} else {
@@ -1687,6 +1687,22 @@
 
 	$(document).ready(function () {
 		gsap.registerPlugin(ScrollTrigger);
+
+		if ($("#stats-bg-video").length) {
+			gsap.fromTo("#stats-bg-video",
+				{ yPercent: -10 },
+				{
+					yPercent: 10,
+					ease: "none",
+					scrollTrigger: {
+						trigger: ".home2-counter-section",
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				}
+			);
+		}
 
 		function combined_image_animation() {
 			// Combined Reveal and Zoom-In Animation

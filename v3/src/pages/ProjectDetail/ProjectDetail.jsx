@@ -21,8 +21,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-res', typeDefault: 'Residential',
       statusKey: 'status-completed', statusDefault: 'Completed',
       year: '2023',
-      heroImg: '/assets/img/projects/p1.jpg',
-      gallery: ['/assets/img/inner-pages/gallery_1_1781627210877.png', '/assets/img/inner-pages/gallery_2_1781627224554.png', '/assets/img/inner-pages/gallery_3_1781627238999.png', '/assets/img/projects/p1.jpg']
+      heroImg: '/v3/assets/img/projects/p1.jpg',
+      gallery: ['/v3/assets/img/inner-pages/gallery_1_1781627210877.png', '/v3/assets/img/inner-pages/gallery_2_1781627224554.png', '/v3/assets/img/inner-pages/gallery_3_1781627238999.png', '/v3/assets/img/projects/p1.jpg']
     },
     'araf-2': {
       titleKey: 'proj-2-title', titleDefault: 'Araf 2',
@@ -31,8 +31,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-com', typeDefault: 'Commercial',
       statusKey: 'status-completed', statusDefault: 'Completed',
       year: '2024',
-      heroImg: '/assets/img/projects/p2.jpg',
-      gallery: ['/assets/img/projects/araf2.png', '/assets/img/projects/p2.jpg']
+      heroImg: '/v3/assets/img/projects/p2.jpg',
+      gallery: ['/v3/assets/img/projects/araf2.png', '/v3/assets/img/projects/p2.jpg']
     },
     'araf-3': {
       titleKey: 'proj-3-title', titleDefault: 'Araf 3',
@@ -41,8 +41,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-res', typeDefault: 'Residential',
       statusKey: 'tab-construction', statusDefault: 'Under Construction',
       year: '2025',
-      heroImg: '/assets/img/projects/project3.PNG',
-      gallery: ['/assets/img/projects/project3.PNG']
+      heroImg: '/v3/assets/img/projects/project3.PNG',
+      gallery: ['/v3/assets/img/projects/project3.PNG']
     },
     'araf-4': {
       titleKey: 'proj-4-title', titleDefault: 'Araf 4',
@@ -51,8 +51,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-com', typeDefault: 'Commercial',
       statusKey: 'tab-construction', statusDefault: 'Under Construction',
       year: '2026',
-      heroImg: '/assets/img/projects/araf4.PNG',
-      gallery: ['/assets/img/projects/araf4.PNG']
+      heroImg: '/v3/assets/img/projects/araf4.PNG',
+      gallery: ['/v3/assets/img/projects/araf4.PNG']
     },
     'araf-5': {
       titleKey: 'proj-5-title', titleDefault: 'Araf 5',
@@ -61,8 +61,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-mix', typeDefault: 'Mixed-Use',
       statusKey: 'tab-construction', statusDefault: 'Under Construction',
       year: '2026',
-      heroImg: '/assets/img/projects/araf5.png',
-      gallery: ['/assets/img/projects/araf5.png']
+      heroImg: '/v3/assets/img/projects/araf5.png',
+      gallery: ['/v3/assets/img/projects/araf5.png']
     },
     'araf-narsis': {
       titleKey: 'proj-6-title', titleDefault: 'Araf Narsis',
@@ -71,8 +71,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-res', typeDefault: 'Residential',
       statusKey: 'tab-available', statusDefault: 'Available',
       year: '2025',
-      heroImg: '/assets/img/projects/araf6.PNG',
-      gallery: ['/assets/img/projects/araf6.PNG']
+      heroImg: '/v3/assets/img/projects/araf6.PNG',
+      gallery: ['/v3/assets/img/projects/araf6.PNG']
     },
     'araf-7': {
       titleKey: 'proj-7-title', titleDefault: 'Araf 7',
@@ -81,8 +81,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-mix', typeDefault: 'Mixed-Use',
       statusKey: 'tab-construction', statusDefault: 'Under Construction',
       year: '2027',
-      heroImg: '/assets/img/projects/araf7.png',
-      gallery: ['/assets/img/projects/araf7.png']
+      heroImg: '/v3/assets/img/projects/araf7.png',
+      gallery: ['/v3/assets/img/projects/araf7.png']
     },
     'araf-8': {
       titleKey: 'proj-8-title', titleDefault: 'Araf 8',
@@ -91,8 +91,8 @@ export default function ProjectDetail() {
       typeKey: 'project-type-res', typeDefault: 'Residential',
       statusKey: 'tab-construction', statusDefault: 'Under Construction',
       year: '2027',
-      heroImg: '/assets/img/projects/araf8.png',
-      gallery: ['/assets/img/projects/araf8.png']
+      heroImg: '/v3/assets/img/projects/araf8.png',
+      gallery: ['/v3/assets/img/projects/araf8.png']
     }
   };
 
@@ -237,7 +237,7 @@ export default function ProjectDetail() {
                     {t('brochure-desc', 'Download the complete presentation to explore floor plans and specifications.')}
                   </p>
                   <a 
-                    href="/assets/أراف نارسس (1).pdf" 
+                    href="/v3/assets/أراف نارسس (1).pdf" 
                     target="_blank" 
                     rel="noreferrer"
                     className="inline-block border border-white text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-white hover:text-text-primary transition-colors duration-300 w-full"

@@ -18,21 +18,21 @@ export default function Disciplines() {
       titleAr: 'التطوير السكني',
       descEn: 'Engineering ultra-luxury private residences that redefine modern living.',
       descAr: 'هندسة مساكن خاصة فائقة الفخامة تعيد تعريف الحياة العصرية.',
-      img: '/assets/img/hero/home1-banner-img3.jpg'
+      img: '/v3/assets/img/hero/home1-banner-img3.jpg'
     },
     {
       titleEn: 'Commercial Architecture',
       titleAr: 'العمارة التجارية',
       descEn: 'Creating iconic corporate headquarters and premium retail spaces.',
       descAr: 'إنشاء مقرات رئيسية للشركات ومساحات تجزئة فاخرة.',
-      img: '/assets/img/hero/home1-banner-img2.jpg'
+      img: '/v3/assets/img/hero/home1-banner-img2.jpg'
     },
     {
       titleEn: 'Master Planning',
       titleAr: 'التخطيط الرئيسي',
       descEn: 'Developing sustainable, multi-use communities for the future of Saudi Arabia.',
       descAr: 'تطوير مجتمعات مستدامة متعددة الاستخدامات لمستقبل المملكة.',
-      img: '/assets/img/projects/p1.jpg'
+      img: '/v3/assets/img/projects/p1.jpg'
     }
   ];
 

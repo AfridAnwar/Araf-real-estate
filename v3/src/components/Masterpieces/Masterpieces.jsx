@@ -11,10 +11,10 @@ export default function Masterpieces() {
   const isRTL = i18n.language === 'ar';
 
   const images = [
-    { src: '/assets/img/projects/p1.jpg', speed: 0.1, aspect: 'aspect-[4/5]' },
-    { src: '/assets/img/projects/p2.jpg', speed: 0.25, aspect: 'aspect-[3/4]' },
-    { src: '/assets/img/projects/project3.PNG', speed: 0.15, aspect: 'aspect-square' },
-    { src: '/assets/img/projects/araf4.PNG', speed: 0.3, aspect: 'aspect-[4/3]' },
+    { src: '/v3/assets/img/projects/p1.jpg', speed: 0.1, aspect: 'aspect-[4/5]' },
+    { src: '/v3/assets/img/projects/p2.jpg', speed: 0.25, aspect: 'aspect-[3/4]' },
+    { src: '/v3/assets/img/projects/project3.PNG', speed: 0.15, aspect: 'aspect-square' },
+    { src: '/v3/assets/img/projects/araf4.PNG', speed: 0.3, aspect: 'aspect-[4/3]' },
   ];
 
   useEffect(() => {

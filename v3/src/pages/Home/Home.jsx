@@ -3,6 +3,7 @@ import Manifesto from '../../components/Manifesto/Manifesto';
 import Scale from '../../components/Scale/Scale';
 import Philosophy from '../../components/Philosophy/Philosophy';
 import Masterpieces from '../../components/Masterpieces/Masterpieces';
+import BrandFilm from '../../components/BrandFilm/BrandFilm';
 import Anatomy from '../../components/Anatomy/Anatomy';
 import Disciplines from '../../components/Disciplines/Disciplines';
 import Journal from '../../components/Journal/Journal';
@@ -16,6 +17,7 @@ export default function Home() {
       <Scale />
       <Philosophy />
       <Masterpieces />
+      <BrandFilm />
       <Anatomy />
       <Disciplines />
       <Journal />

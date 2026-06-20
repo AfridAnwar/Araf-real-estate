@@ -16,25 +16,25 @@ export default function Journal() {
       date: 'OCT 2026',
       titleEn: 'Araf wins "Best Luxury Developer" at Riyadh Real Estate Summit',
       titleAr: 'أراف تفوز بجائزة "أفضل مطور فاخر" في قمة الرياض العقارية',
-      img: '/assets/img/projects/p1.jpg'
+      img: '/v3/assets/img/projects/p1.jpg'
     },
     {
       date: 'SEP 2026',
       titleEn: 'The Future of Sustainable Urban Planning in KSA',
       titleAr: 'مستقبل التخطيط الحضري المستدام في المملكة',
-      img: '/assets/img/projects/p2.jpg'
+      img: '/v3/assets/img/projects/p2.jpg'
     },
     {
       date: 'AUG 2026',
       titleEn: 'Announcing our newest master-planned community',
       titleAr: 'الإعلان عن أحدث مجتمع مخطط لدينا',
-      img: '/assets/img/projects/project3.PNG'
+      img: '/v3/assets/img/projects/project3.PNG'
     },
     {
       date: 'JUL 2026',
       titleEn: 'Architectural integrity: Our material selection process',
       titleAr: 'النزاهة المعمارية: عملية اختيار المواد لدينا',
-      img: '/assets/img/hero/home1-banner-img3.jpg'
+      img: '/v3/assets/img/hero/home1-banner-img3.jpg'
     }
   ];
 

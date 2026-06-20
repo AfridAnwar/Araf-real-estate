@@ -10,9 +10,9 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    { image: '/assets/img/hero/home1-banner-img1.jpg' },
-    { image: '/assets/img/hero/home1-banner-img2.jpg' },
-    { image: '/assets/img/hero/home1-banner-img3.jpg' }
+    { image: '/v3/assets/img/hero/home1-banner-img1.jpg' },
+    { image: '/v3/assets/img/hero/home1-banner-img2.jpg' },
+    { image: '/v3/assets/img/hero/home1-banner-img3.jpg' }
   ];
 
   useEffect(() => {

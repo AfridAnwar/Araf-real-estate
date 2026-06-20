@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title lng-tag="meta-title">Araf Real Estate | Where vision meets structure</title>
-    <link rel="icon" href="assets/img/logo/logo.png" type="image/png">
+    <link rel="icon" href="assets/img/fav-icon-white.png" type="image/png">
     
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -477,8 +477,8 @@
     <!-- Video Lightbox -->
     <div id="video-lightbox" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;">
         <button onclick="closeLightbox()" style="position:absolute; top:40px; right:40px; background:none; border:none; color:white; font-size:40px; cursor:pointer;">&times;</button>
-        <video id="araf-video" controls style="max-width:90%; max-height:80vh;">
-            <source src="assets/video/Araf intro.mp4" type="video/mp4">
+        <video id="araf-video" controls preload="none" style="max-width:90%; max-height:80vh;">
+            <source src="assets/video/araf-journey.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -501,7 +501,7 @@
 
     <!-- § 9: Contact CTA Banner -->
     <section class="cta-banner">
-        <img src="assets/img/hero/home1-banner-img3.jpg" alt="" class="cta-bg" data-speed="0.7">
+        <video src="assets/video/araf-journey.mp4" class="cta-bg" data-speed="0.7" autoplay muted loop playsinline></video>
         <div class="cta-content gs-reveal">
             <h2 lng-tag="cta-heading">Let's build <i class="font-display">something</i> extraordinary</h2>
             <div class="cta-buttons">

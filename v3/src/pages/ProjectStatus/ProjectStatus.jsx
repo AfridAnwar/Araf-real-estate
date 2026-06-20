@@ -23,39 +23,39 @@ export default function ProjectStatus() {
     construction: [
       {
         id: 'araf-5', title: t('proj-5-title', 'Araf 5'), loc: t('proj-5-loc', 'Al Khobar'), type: t('project-type-mix', 'Mixed-Use'),
-        img: '/assets/img/projects/araf5.png', progress: 75, eta: t('status-eta-1', 'Estimated Completion: Q3 2026')
+        img: '/v3/assets/img/projects/araf5.png', progress: 75, eta: t('status-eta-1', 'Estimated Completion: Q3 2026')
       },
       {
         id: 'araf-narsis', title: t('proj-6-title', 'Araf Narsis'), loc: t('proj-6-loc', 'Riyadh'), type: t('project-type-res', 'Residential'),
-        img: '/assets/img/projects/araf6.PNG', progress: 40, eta: t('status-eta-4', 'Estimated Completion: Q1 2027')
+        img: '/v3/assets/img/projects/araf6.PNG', progress: 40, eta: t('status-eta-4', 'Estimated Completion: Q1 2027')
       },
       {
         id: 'araf-7', title: t('proj-7-title', 'Araf 7'), loc: t('proj-7-loc', 'Jeddah'), type: t('project-type-res', 'Residential'),
-        img: '/assets/img/projects/araf7.png', progress: 25, eta: 'Estimated Completion: Q4 2027'
+        img: '/v3/assets/img/projects/araf7.png', progress: 25, eta: 'Estimated Completion: Q4 2027'
       },
       {
         id: 'araf-8', title: t('proj-8-title', 'Araf 8'), loc: t('proj-8-loc', 'Dammam'), type: t('project-type-res', 'Residential'),
-        img: '/assets/img/projects/araf8.png', progress: 10, eta: 'Estimated Completion: Q2 2028'
+        img: '/v3/assets/img/projects/araf8.png', progress: 10, eta: 'Estimated Completion: Q2 2028'
       }
     ],
     available: [
       {
         id: 'araf-4', title: t('proj-4-title', 'Araf 4'), loc: t('proj-4-loc', 'Dammam'), type: t('project-type-com', 'Commercial'),
-        img: '/assets/img/projects/araf4.PNG', unitsAvailable: '12 / 50', unitProgress: 24
+        img: '/v3/assets/img/projects/araf4.PNG', unitsAvailable: '12 / 50', unitProgress: 24
       }
     ],
     sold: [
       {
         id: 'araf-1', title: t('proj-1-title', 'Araf 1'), loc: t('proj-1-loc', 'Dammam'), type: t('project-type-res', 'Residential'),
-        img: '/assets/img/projects/araff1.png', completedDate: t('status-completed-date', 'Completed: 2024')
+        img: '/v3/assets/img/projects/araff1.png', completedDate: t('status-completed-date', 'Completed: 2024')
       },
       {
         id: 'araf-2', title: t('proj-2-title', 'Araf 2'), loc: t('proj-2-loc', 'Riyadh'), type: t('project-type-com', 'Commercial'),
-        img: '/assets/img/projects/araf2.png', completedDate: 'Completed: 2023'
+        img: '/v3/assets/img/projects/araf2.png', completedDate: 'Completed: 2023'
       },
       {
         id: 'araf-3', title: t('proj-3-title', 'Araf 3'), loc: t('proj-3-loc', 'Jeddah'), type: t('project-type-res', 'Residential'),
-        img: '/assets/img/projects/project3.PNG', completedDate: 'Completed: 2025'
+        img: '/v3/assets/img/projects/project3.PNG', completedDate: 'Completed: 2025'
       }
     ]
   };
@@ -109,7 +109,7 @@ export default function ProjectStatus() {
         <div className="absolute inset-0 z-0">
           <div ref={heroBgRef} className="absolute inset-x-0 -top-[20%] h-[140%] w-full">
             <img 
-              src="/assets/img/projects/araf4.PNG" 
+              src="/v3/assets/img/projects/araf4.PNG" 
               alt="Project Status" 
               className="w-full h-full object-cover grayscale-[20%]"
             />

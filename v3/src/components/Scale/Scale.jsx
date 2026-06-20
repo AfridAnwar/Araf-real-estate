@@ -89,7 +89,7 @@ export default function Scale() {
       <div className="absolute inset-0 z-0">
         <div ref={bgRef} className="absolute inset-x-0 -top-[20%] h-[140%] w-full">
           <img 
-            src="/assets/img/hero/home1-banner-img2.jpg" 
+            src="/v3/assets/img/hero/home1-banner-img2.jpg" 
             alt="Araf Architecture" 
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity grayscale-[30%]"
           />

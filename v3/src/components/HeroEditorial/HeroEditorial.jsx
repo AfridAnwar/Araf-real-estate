@@ -97,7 +97,7 @@ export default function HeroEditorial() {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:hidden z-10"></div>
         <div className="absolute inset-0 bg-black/20 z-10 hidden lg:block"></div>
         <img 
-          src="/assets/img/projects/p2.jpg" 
+          src="/v3/assets/img/projects/p2.jpg" 
           alt="Araf Architecture" 
           className="w-full h-full object-cover"
         />

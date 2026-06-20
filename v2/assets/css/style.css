@@ -320,14 +320,14 @@ html[dir="rtl"] .btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
-  padding: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
   transition: padding 0.4s var(--transition-smooth);
 }
 
 .header.scrolled .logo {
-  padding: 5px;
+  padding: 0;
   box-shadow: none;
 }
 
@@ -337,7 +337,7 @@ html[dir="rtl"] .btn {
   opacity: 0;
   /* Hidden initially for curtain reveal */
   transform: scale(1.5) translateY(100px);
-  mix-blend-mode: darken;
+  mix-blend-mode: normal;
 }
 
 .nav-links {
@@ -1224,7 +1224,7 @@ html[dir="rtl"] .panel-watermark {
 }
 
 .footer-logo {
-  height: 48px;
+  height: 80px;
   margin-bottom: 24px;
   filter: brightness(0) invert(1);
 }
@@ -1578,3 +1578,24 @@ html[dir="rtl"] .mobile-menu-close {
   color: var(--white);
 }
 
+/* Custom styles to invert logo color over dark backgrounds */
+.header:not(.scrolled):not(.light-theme) .logo {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.header:not(.scrolled):not(.light-theme) .logo img {
+  filter: brightness(0) invert(1) !important;
+  mix-blend-mode: normal !important;
+}
+
+.hero-project-logo img {
+  background: transparent !important;
+  filter: brightness(0) invert(1) !important;
+  mix-blend-mode: normal !important;
+  padding: 0 !important;
+}
+
+.footer-col .footer-logo {
+  filter: brightness(0) invert(1) !important;
+}

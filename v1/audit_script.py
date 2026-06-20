@@ -66,7 +66,7 @@ files = [
     "./blog-details.html", "./project-single.html", "./contact.html", "./architecture-project.html",
     "./checkout.html", "./rnovation.html", "./index.html", "./blog-sidebar.html",
     "./project-details.html", "./service-details.html", "./properties.html", "./cart.html",
-    "./project.html", "./real-estate.html", "./product-details.html", "./about.html",
+    "./project.html", "./index.html", "./product-details.html", "./about.html",
     "./faq.html", "./error.html", "./service-details 2.html", "./project-masonary.html",
     "./interior.html", "./project-info-flow.html", "./shop.html", "./meeting.html",
     "./architecture.html", "./service.html", "./service-details-ar.html", "./projectstatus.html",

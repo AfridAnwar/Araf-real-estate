@@ -77,7 +77,7 @@ export default function About() {
         <div className="absolute inset-0 z-0">
           <div ref={heroBgRef} className="absolute inset-x-0 -top-[20%] h-[140%] w-full">
             <img 
-              src="/assets/img/inner-pages/about-hero.jpg" 
+              src="/v3/assets/img/inner-pages/about-hero.jpg" 
               alt="About Araf" 
               className="w-full h-full object-cover grayscale-[30%]"
             />
@@ -104,7 +104,7 @@ export default function About() {
             <div className={`lg:col-span-5 ${isRTL ? 'lg:order-2' : 'lg:order-1'} relative sec-reveal`}>
               <div className="aspect-[4/5] w-full overflow-hidden">
                 <img 
-                  src="/assets/img/inner-pages/story-side.jpg" 
+                  src="/v3/assets/img/inner-pages/story-side.jpg" 
                   alt="Araf Quality" 
                   className="w-full h-full object-cover"
                 />
@@ -145,7 +145,7 @@ export default function About() {
         {/* Mission Panel */}
         <div className="flex-1 bg-black text-white p-12 lg:p-24 flex items-center justify-center relative overflow-hidden">
           <div className={`absolute -bottom-16 ${isRTL ? '-left-16 scale-x-[-1]' : '-right-16'} h-[120%] opacity-5 pointer-events-none`}>
-            <img src="/assets/img/logo/logo.png" alt="Araf Logo" className="h-full object-contain invert" />
+            <img src="/v3/assets/img/logo/logo.png" alt="Araf Logo" className="h-full object-contain invert" />
           </div>
           <div className="max-w-xl relative z-10 w-full">
             <span className="text-white/50 font-mono tracking-widest uppercase text-sm block mb-6 sec-reveal">
@@ -173,13 +173,13 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="gallery-img aspect-[4/5] lg:aspect-auto overflow-hidden">
-              <img src="/assets/img/inner-pages/gallery_1_1781627210877.png" alt="Gallery" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]" />
+              <img src="/v3/assets/img/inner-pages/gallery_1_1781627210877.png" alt="Gallery" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]" />
             </div>
             <div className="gallery-img lg:col-span-2 aspect-[4/3] lg:aspect-auto overflow-hidden">
-              <img src="/assets/img/inner-pages/gallery_4_1781627261369.png" alt="Gallery" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]" />
+              <img src="/v3/assets/img/inner-pages/gallery_4_1781627261369.png" alt="Gallery" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]" />
             </div>
             <div className="gallery-img aspect-[4/5] lg:aspect-auto overflow-hidden">
-              <img src="/assets/img/inner-pages/gallery_3_1781627238999.png" alt="Gallery" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]" />
+              <img src="/v3/assets/img/inner-pages/gallery_3_1781627238999.png" alt="Gallery" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]" />
             </div>
           </div>
         </div>

@@ -47,7 +47,7 @@ export default function AboutPreview() {
           {/* Image Side */}
           <div className="w-full lg:w-1/2 relative h-[600px] lg:h-[800px] overflow-hidden about-img">
             <img 
-              src="/assets/img/hero/home1-banner-img3.jpg" 
+              src="/v3/assets/img/hero/home1-banner-img3.jpg" 
               alt="Araf Architecture" 
               className="w-full h-full object-cover"
             />

@@ -11,11 +11,11 @@ export default function ServicesPreview() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const services = [
-    { key: 'service-1', image: '/assets/img/hero/home1-banner-img1.jpg' },
-    { key: 'service-2', image: '/assets/img/hero/home1-banner-img2.jpg' },
-    { key: 'service-3', image: '/assets/img/hero/home1-banner-img3.jpg' },
-    { key: 'service-4', image: '/assets/img/projects/project1.jpg' },
-    { key: 'service-5', image: '/assets/img/projects/project2.jpg' }
+    { key: 'service-1', image: '/v3/assets/img/hero/home1-banner-img1.jpg' },
+    { key: 'service-2', image: '/v3/assets/img/hero/home1-banner-img2.jpg' },
+    { key: 'service-3', image: '/v3/assets/img/hero/home1-banner-img3.jpg' },
+    { key: 'service-4', image: '/v3/assets/img/projects/p1.jpg' },
+    { key: 'service-5', image: '/v3/assets/img/projects/p2.jpg' }
   ];
 
   useEffect(() => {

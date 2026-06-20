@@ -13,14 +13,14 @@ export default function Projects() {
   const isRTL = i18n.language === 'ar';
 
   const projects = [
-    { id: 'araf-1', title: t('proj-1-title', 'Araf 1'), loc: t('proj-1-loc', 'Dammam'), type: t('project-type-res', 'Residential'), img: '/assets/img/projects/araff1.png' },
-    { id: 'araf-2', title: t('proj-2-title', 'Araf 2'), loc: t('proj-2-loc', 'Riyadh'), type: t('project-type-com', 'Commercial'), img: '/assets/img/projects/araf2.png' },
-    { id: 'araf-3', title: t('proj-3-title', 'Araf 3'), loc: t('proj-3-loc', 'Jeddah'), type: t('project-type-res', 'Residential'), img: '/assets/img/projects/project3.PNG' },
-    { id: 'araf-4', title: t('proj-4-title', 'Araf 4'), loc: t('proj-4-loc', 'Dammam'), type: t('project-type-com', 'Commercial'), img: '/assets/img/projects/araf4.PNG' },
-    { id: 'araf-5', title: t('proj-5-title', 'Araf 5'), loc: t('proj-5-loc', 'Al Khobar'), type: t('project-type-mix', 'Mixed-Use'), img: '/assets/img/projects/araf5.png' },
-    { id: 'araf-narsis', title: t('proj-6-title', 'Araf Narsis'), loc: t('proj-6-loc', 'Riyadh'), type: t('project-type-res', 'Residential'), img: '/assets/img/projects/araf6.PNG' },
-    { id: 'araf-7', title: t('proj-7-title', 'Araf 7'), loc: t('proj-7-loc', 'Jeddah'), type: t('project-type-mix', 'Mixed-Use'), img: '/assets/img/projects/araf7.png' },
-    { id: 'araf-8', title: t('proj-8-title', 'Araf 8'), loc: t('proj-8-loc', 'Dammam'), type: t('project-type-res', 'Residential'), img: '/assets/img/projects/araf8.png' },
+    { id: 'araf-1', title: t('proj-1-title', 'Araf 1'), loc: t('proj-1-loc', 'Dammam'), type: t('project-type-res', 'Residential'), img: '/v3/assets/img/projects/araff1.png' },
+    { id: 'araf-2', title: t('proj-2-title', 'Araf 2'), loc: t('proj-2-loc', 'Riyadh'), type: t('project-type-com', 'Commercial'), img: '/v3/assets/img/projects/araf2.png' },
+    { id: 'araf-3', title: t('proj-3-title', 'Araf 3'), loc: t('proj-3-loc', 'Jeddah'), type: t('project-type-res', 'Residential'), img: '/v3/assets/img/projects/project3.PNG' },
+    { id: 'araf-4', title: t('proj-4-title', 'Araf 4'), loc: t('proj-4-loc', 'Dammam'), type: t('project-type-com', 'Commercial'), img: '/v3/assets/img/projects/araf4.PNG' },
+    { id: 'araf-5', title: t('proj-5-title', 'Araf 5'), loc: t('proj-5-loc', 'Al Khobar'), type: t('project-type-mix', 'Mixed-Use'), img: '/v3/assets/img/projects/araf5.png' },
+    { id: 'araf-narsis', title: t('proj-6-title', 'Araf Narsis'), loc: t('proj-6-loc', 'Riyadh'), type: t('project-type-res', 'Residential'), img: '/v3/assets/img/projects/araf6.PNG' },
+    { id: 'araf-7', title: t('proj-7-title', 'Araf 7'), loc: t('proj-7-loc', 'Jeddah'), type: t('project-type-mix', 'Mixed-Use'), img: '/v3/assets/img/projects/araf7.png' },
+    { id: 'araf-8', title: t('proj-8-title', 'Araf 8'), loc: t('proj-8-loc', 'Dammam'), type: t('project-type-res', 'Residential'), img: '/v3/assets/img/projects/araf8.png' },
   ];
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export default function Projects() {
         <div className="absolute inset-0 z-0">
           <div ref={heroBgRef} className="absolute inset-x-0 -top-[20%] h-[140%] w-full">
             <img 
-              src="/assets/img/inner-pages/gallery_1_1781627210877.png" 
+              src="/v3/assets/img/inner-pages/gallery_1_1781627210877.png" 
               alt="Projects Portfolio" 
               className="w-full h-full object-cover grayscale-[20%]"
             />

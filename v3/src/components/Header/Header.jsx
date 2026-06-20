@@ -27,6 +27,7 @@ export default function Header() {
   };
 
   const isRTL = i18n.language === 'ar';
+  const isHome = location.pathname === '/' || location.pathname === '/v3' || location.pathname === '/v3/';
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -37,21 +38,23 @@ export default function Header() {
     }
   };
 
+  const headerClasses = scrolled 
+    ? 'bg-bg-primary/95 backdrop-blur-md py-4 shadow-sm text-text-primary border-black/5' 
+    : isHome 
+      ? 'bg-transparent py-6 text-white border-transparent mix-blend-difference'
+      : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-6 text-white border-white/10';
+
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${
-          scrolled 
-            ? 'bg-bg-primary/95 backdrop-blur-md py-4 shadow-sm text-text-primary border-black/5' 
-            : 'bg-transparent py-6 text-white border-white/20 mix-blend-difference'
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${headerClasses}`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link to="/" className="relative z-50">
             <img 
-              src="/assets/img/logo/logo.png" 
+              src="/v3/assets/img/logo/logo.png" 
               alt="Araf Logo" 
-              className={`transition-all duration-300 ${scrolled ? 'h-10' : 'h-14'} ${isRTL ? 'ml-8' : 'mr-8'} ${!scrolled ? 'invert' : ''}`} 
+              className={`transition-all duration-300 w-auto object-contain ${scrolled ? 'h-20' : 'h-28'} ${isRTL ? 'ml-8' : 'mr-8'} ${!scrolled ? (isHome ? 'invert' : 'invert brightness-0 filter drop-shadow-lg') : ''}`} 
             />
           </Link>
 

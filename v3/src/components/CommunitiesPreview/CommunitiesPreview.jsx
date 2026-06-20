@@ -12,10 +12,10 @@ export default function CommunitiesPreview() {
   const scrollWrapperRef = useRef(null);
 
   const projects = [
-    { title: 'proj-1-title', loc: 'proj-1-loc', img: '/assets/img/projects/project1.jpg', slug: 'araf-1' },
-    { title: 'proj-2-title', loc: 'proj-2-loc', img: '/assets/img/projects/project2.jpg', slug: 'araf-2' },
-    { title: 'proj-3-title', loc: 'proj-3-loc', img: '/assets/img/projects/project3.jpg', slug: 'araf-3' },
-    { title: 'proj-4-title', loc: 'proj-4-loc', img: '/assets/img/projects/project4.jpg', slug: 'araf-4' },
+    { title: 'proj-1-title', loc: 'proj-1-loc', img: '/v3/assets/img/projects/project1.jpg', slug: 'araf-1' },
+    { title: 'proj-2-title', loc: 'proj-2-loc', img: '/v3/assets/img/projects/project2.jpg', slug: 'araf-2' },
+    { title: 'proj-3-title', loc: 'proj-3-loc', img: '/v3/assets/img/projects/project3.jpg', slug: 'araf-3' },
+    { title: 'proj-4-title', loc: 'proj-4-loc', img: '/v3/assets/img/projects/project4.jpg', slug: 'araf-4' },
   ];
 
   useEffect(() => {

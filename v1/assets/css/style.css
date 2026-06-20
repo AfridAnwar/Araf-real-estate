@@ -22821,3 +22821,22 @@ header.style-3.two.sticky {
   right: auto;
   left: 0;
 }
+
+/* Custom styles for transparent/white header */
+header.header-area.style-1:not(.sticky) .header-logo img {
+    filter: brightness(0) invert(1);
+}
+header.header-area.style-1:not(.sticky) .main-menu ul.menu-list > li > a,
+header.header-area.style-1:not(.sticky) .main-menu ul.menu-list > li > i {
+    color: #ffffff !important;
+}
+header.header-area.style-1:not(.sticky) .language-switcher > a,
+header.header-area.style-1:not(.sticky) .language-switcher > span.mx-3 {
+    color: #ffffff !important;
+}
+header.header-area.style-1:not(.sticky) .nav-right .right-sidebar-button span,
+header.header-area.style-1:not(.sticky) .nav-right .right-sidebar-button svg,
+header.header-area.style-1:not(.sticky) .nav-right .sidebar-button svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}

@@ -89,7 +89,7 @@ export default function Anatomy() {
 
           <div className="md:col-span-1 border-e border-black/10 anatomy-border-v relative overflow-hidden group min-h-[40vh]">
             <img 
-              src="/assets/img/hero/home1-banner-img2.jpg" 
+              src="/v3/assets/img/hero/home1-banner-img2.jpg" 
               alt="Material Detail"
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
             />
